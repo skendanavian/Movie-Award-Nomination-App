@@ -1,4 +1,4 @@
-
+import './Button.scss';
 
 function Button() {
   return (
