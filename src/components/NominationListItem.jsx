@@ -4,7 +4,7 @@ import "./NominationListItem.scss";
 function NominationListItem({ movieData }) {
   return (
     <li>
-      {movieData} <Button>Nominate</Button>
+      {movieData} <Button>Remove</Button>
     </li>
   );
 }
