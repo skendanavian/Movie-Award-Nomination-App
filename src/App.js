@@ -1,5 +1,6 @@
 import { useState } from "react";
-import SearchBar from "../src/components/SearchBar";
+import SearchPanel from "../src/components/SearchPanel";
+import NominationPanel from "../src/components/NominationPanel";
 
 function App() {
   const [input, setInput] = useState("");
@@ -8,7 +9,12 @@ function App() {
     setInput(value);
   };
 
-  return <SearchBar handleSearchBar={handleSearchBar} />;
+  return (
+    <div>
+      <SearchPanel handleSearchBar={handleSearchBar} />
+      <NominationPanel input={input} />
+    </div>
+  );
 }
 
 export default App;

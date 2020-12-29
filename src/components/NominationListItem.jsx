@@ -1,8 +1,11 @@
-import './NominationListItem.scss';
+import Button from "./Button";
+import "./NominationListItem.scss";
 
-function NominationListItem() {
+function NominationListItem({ movieData }) {
   return (
-  
+    <li>
+      {movieData} <Button>Nominate</Button>
+    </li>
   );
 }
 

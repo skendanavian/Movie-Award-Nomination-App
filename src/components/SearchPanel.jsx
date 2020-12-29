@@ -1,8 +1,12 @@
-import './SearchPanel.scss';
+import SearchBar from "./SearchBar";
+import "./SearchPanel.scss";
 
-function SearchPanel() {
+function SearchPanel({ handleSearchBar }) {
   return (
-  
+    <div>
+      <h2>Find a Movie</h2>
+      <SearchBar handleSearchBar={handleSearchBar} />
+    </div>
   );
 }
 
