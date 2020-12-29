@@ -1,0 +1,11 @@
+.btn {
+  &:hover {
+    cursor: pointer;
+  }
+  &--selected {
+    opacity: 50%;
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}

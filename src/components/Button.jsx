@@ -1,8 +1,13 @@
-import './Button.scss';
+import "./Button.scss";
+const classNames = require("classnames");
 
-function Button() {
+function Button({ children, selected }) {
+  const btn = classNames("btn", { "btn--selected": selected });
+
   return (
-  
+    <button type="button" className={btn}>
+      {children}
+    </button>
   );
 }
 
