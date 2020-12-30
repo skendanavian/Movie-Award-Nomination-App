@@ -2,7 +2,7 @@
   &:hover {
     cursor: pointer;
   }
-  &--selected {
+  &--disabled {
     opacity: 50%;
     &:hover {
       cursor: not-allowed;

@@ -1,16 +1,30 @@
+import { useEffect } from "react";
 import SearchListItem from "./SearchListItem";
 import "./SearchResultsPanel.scss";
 
-function SearchResultsPanel({ input, searchResults }) {
-  const searchListItems = searchResults.map((movie, index) => {
-    return <SearchListItem key={index} movieData={movie} />;
-  });
+function SearchResultsPanel({ input, searchResults, nominees, addNominee }) {
+  let searchResultsList;
+
+  if (searchResults) {
+    searchResultsList = searchResults.map((movie) => {
+      return (
+        <SearchListItem
+          key={movie.Title}
+          nominees={nominees}
+          movieData={movie}
+          addNominee={addNominee}
+          searchResults={searchResults}
+        />
+      );
+    });
+  }
 
   return (
     <div>
-      <h3>Results for "{input}" </h3>
+      {input ? <h3>Search Results for "{input}" </h3> : <h3>Search Results</h3>}
+
       <div>
-        <ul>{searchListItems}</ul>
+        {searchResults ? <ul>{searchResultsList}</ul> : <p>No Results Found</p>}
       </div>
     </div>
   );

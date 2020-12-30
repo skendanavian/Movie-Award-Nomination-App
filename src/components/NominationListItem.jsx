@@ -1,10 +1,13 @@
 import Button from "./Button";
 import "./NominationListItem.scss";
 
-function NominationListItem({ movieData }) {
+function NominationListItem({ movie, removeNominee }) {
   return (
     <li>
-      {movieData} <Button>Remove</Button>
+      {`${movie.title} (${movie.year})`}
+      <Button movieData={movie} onClick={removeNominee}>
+        Remove
+      </Button>
     </li>
   );
 }
