@@ -7,17 +7,17 @@ import axios from "axios";
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 const testNominees = ["M1", "M2", "M3", "M4", "M5"];
-const testSearchList = ["Movie 1", "Movie 2", "Movie 3"];
 
 function App() {
   const [input, setInput] = useState("");
   const [searchList, setSearchList] = useState([]);
   const [nominations, setNominations] = useState([]);
 
+  //Move the axios call into the API Helper Eventually
   useEffect(() => {
     axios
       .get(
-        `http://www.omdbapi.com/?s=${input}&type=movie&page=1&apikey=${API_KEY}`
+        `http://www.omdbapi.com/?s=${input.toLowerCase()}&type=movie&page=1&apikey=${API_KEY}`
       )
       .then((response) => {
         setSearchList(response.data);
@@ -28,7 +28,7 @@ function App() {
   }, [input]);
 
   const handleSearchBar = (value) => {
-    setInput(value.toLowerCase());
+    setInput(value.trim());
   };
 
   const addNomination = (data) => {};
