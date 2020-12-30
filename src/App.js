@@ -6,12 +6,11 @@ import getMovieList from "../src/api/omdb/index";
 import axios from "axios";
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
-const testNominees = ["M1", "M2", "M3", "M4", "M5"];
 
 function App() {
   const [input, setInput] = useState("");
   const [searchList, setSearchList] = useState([]);
-  const [nominations, setNominations] = useState([]);
+  const [nominees, setNominees] = useState([]);
 
   //Move the axios call into the API Helper Eventually
   useEffect(() => {
@@ -31,13 +30,23 @@ function App() {
     setInput(value.trim());
   };
 
-  const addNomination = (data) => {};
+  const addNominee = (movieData) => {
+    setNominees([...nominees, movieData]);
+  };
+  const removeNominee = (movieData, index) => {
+    console.log("clicked");
+    console.log({ index });
+  };
 
   return (
     <div>
       <SearchPanel handleSearchBar={handleSearchBar} />
-      <SearchResultsPanel input={input} searchResults={searchList.Search} />
-      <NominationPanel nominees={testNominees} nominees={testNominees} />
+      <SearchResultsPanel
+        input={input}
+        searchResults={searchList.Search}
+        addNominee={addNominee}
+      />
+      <NominationPanel nominees={nominees} removeNominee={removeNominee} />
     </div>
   );
 }

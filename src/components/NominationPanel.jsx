@@ -1,9 +1,15 @@
 import NominationListItem from "./NominationListItem";
 import "./NominationPanel.scss";
 
-function NominationPanel({ nominees }) {
+function NominationPanel({ nominees, removeNominee }) {
   const nominationList = nominees.map((movie, index) => {
-    return <NominationListItem key={index} movieData={movie} />;
+    return (
+      <NominationListItem
+        key={index}
+        movieData={movie}
+        removeNominee={removeNominee}
+      />
+    );
   });
 
   return (
