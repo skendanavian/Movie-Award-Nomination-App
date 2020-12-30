@@ -19,7 +19,7 @@ function NominationPanel({ nominees, removeNominee }) {
   }
 
   return (
-    <div>
+    <div className="nominee-panel">
       <h3>Nominations</h3>
       <div>{nominationList}</div>
     </div>

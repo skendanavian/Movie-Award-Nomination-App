@@ -1,0 +1,12 @@
+@import "../styles/variables.scss";
+
+.results-panel {
+  width: 55vw;
+  height: 40vh;
+  margin: 10px;
+  background-color: $secondary-background-color;
+
+  li {
+    color: $color-secondary;
+  }
+}

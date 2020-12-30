@@ -1,0 +1,47 @@
+@import "./styles/variables.scss";
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  color: $color-primary;
+  text-align: center;
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-background-color;
+}
+
+.header {
+  width: 100vw;
+  background-color: black;
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-weight: 400;
+    font-style: italic;
+    color: $primary-background-color;
+    margin: 0.5em 2em;
+  }
+
+  .icon {
+    color: silver;
+
+    font-size: 1.5em;
+  }
+}
+
+.flex-row {
+  display: flex;
+  margin-top: 2rem;
+}

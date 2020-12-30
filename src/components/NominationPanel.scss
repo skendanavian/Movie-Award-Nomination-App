@@ -1,0 +1,12 @@
+@import "../styles/variables.scss";
+
+.nominee-panel {
+  width: 40vw;
+  height: 40vh;
+  background-color: $secondary-background-color;
+  margin: 10px;
+
+  li {
+    color: $color-secondary;
+  }
+}

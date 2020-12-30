@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import SearchPanel from "../src/components/SearchPanel";
 import SearchResultsPanel from "../src/components/SearchResultsPanel";
 import NominationPanel from "../src/components/NominationPanel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilm, faTicketAlt } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import "./App.scss";
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
@@ -54,15 +57,28 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="page-container">
+      <div className="header">
+        <div className="icon">
+          <FontAwesomeIcon icon={faFilm} />
+        </div>
+
+        <h1>The Shoppies</h1>
+        <div className="icon">
+          <FontAwesomeIcon icon={faFilm} />
+        </div>
+      </div>
+
       <SearchPanel handleSearchBar={handleSearchBar} />
-      <SearchResultsPanel
-        input={input}
-        nominees={nominees}
-        searchResults={searchList}
-        addNominee={addNominee}
-      />
-      <NominationPanel nominees={nominees} removeNominee={removeNominee} />
+      <div className="flex-row">
+        <SearchResultsPanel
+          input={input}
+          nominees={nominees}
+          searchResults={searchList}
+          addNominee={addNominee}
+        />
+        <NominationPanel nominees={nominees} removeNominee={removeNominee} />
+      </div>
     </div>
   );
 }
