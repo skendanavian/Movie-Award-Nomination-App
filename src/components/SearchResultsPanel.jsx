@@ -13,6 +13,7 @@ function SearchResultsPanel({ input, searchResults, nominees, addNominee }) {
           nominees={nominees}
           movieData={movie}
           addNominee={addNominee}
+          searchResults={searchResults}
         />
       );
     });

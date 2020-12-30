@@ -29,7 +29,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, [input, nominees]);
+  }, [input]);
 
   const handleSearchBar = (value) => {
     setInput(value.trim());
