@@ -7,27 +7,14 @@ function SearchResultsPanel({ input, searchResults, nominees, addNominee }) {
 
   if (searchResults) {
     searchResultsList = searchResults.map((movie) => {
-      if (!nominees.includes(movie.title)) {
-        return (
-          <SearchListItem
-            disabled={false}
-            key={movie.Title}
-            nominees={nominees}
-            movieData={movie}
-            addNominee={addNominee}
-          />
-        );
-      } else {
-        return (
-          <SearchListItem
-            disabled={true}
-            key={movie.Title}
-            nominees={nominees}
-            movieData={movie}
-            addNominee={addNominee}
-          />
-        );
-      }
+      return (
+        <SearchListItem
+          key={movie.Title}
+          nominees={nominees}
+          movieData={movie}
+          addNominee={addNominee}
+        />
+      );
     });
   }
 

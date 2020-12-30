@@ -16,34 +16,40 @@ function App() {
   //Move the axios call into the API Helper Eventually
   //Move state and helpers into custom hook --> useApplicationData
   //Could be nice to add loading state/circle while doing axios calls
+  //Could use imdbID as keys
   useEffect(() => {
     axios
       .get(
         `http://www.omdbapi.com/?s=${input.toLowerCase()}&type=movie&page=1&apikey=${API_KEY}`
       )
       .then((response) => {
-        setSearchList(response.data);
+        //limit results to 3 movies
+        setSearchList(response.data.Search.slice(0, 3));
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [input]);
+  }, [input, nominees]);
 
   const handleSearchBar = (value) => {
     setInput(value.trim());
   };
 
   const addNominee = (movieData) => {
-    setNominees([
-      ...nominees,
-      { title: movieData.Title, year: movieData.Year },
-    ]);
+    if (nominees === undefined) {
+      setNominees([{ title: movieData.Title, year: movieData.Year }]);
+    } else
+      setNominees([
+        ...nominees,
+        { title: movieData.Title, year: movieData.Year },
+      ]);
   };
 
   const removeNominee = (movieData) => {
     const updatedNominees = nominees.filter(
-      (movie) => movie.Title !== movieData.Title
+      (movie) => movie.title !== movieData.title
     );
+
     setNominees(updatedNominees);
   };
 
@@ -53,7 +59,7 @@ function App() {
       <SearchResultsPanel
         input={input}
         nominees={nominees}
-        searchResults={searchList.Search}
+        searchResults={searchList}
         addNominee={addNominee}
       />
       <NominationPanel nominees={nominees} removeNominee={removeNominee} />
