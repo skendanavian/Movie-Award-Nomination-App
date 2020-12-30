@@ -5,6 +5,7 @@ function SearchResultsPanel({ input, searchResults, addNominee }) {
   let searchResultsList;
   if (searchResults) {
     searchResultsList = searchResults.map((movie, index) => {
+      const key = index;
       return (
         <SearchListItem key={index} movieData={movie} addNominee={addNominee} />
       );

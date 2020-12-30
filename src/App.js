@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import SearchPanel from "../src/components/SearchPanel";
 import SearchResultsPanel from "../src/components/SearchResultsPanel";
 import NominationPanel from "../src/components/NominationPanel";
-import getMovieList from "../src/api/omdb/index";
 import axios from "axios";
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
@@ -11,6 +10,8 @@ function App() {
   const [input, setInput] = useState("");
   const [searchList, setSearchList] = useState([]);
   const [nominees, setNominees] = useState([]);
+
+  console.log({ nominees });
 
   //Move the axios call into the API Helper Eventually
   useEffect(() => {
@@ -31,11 +32,16 @@ function App() {
   };
 
   const addNominee = (movieData) => {
-    setNominees([...nominees, movieData]);
+    setNominees([
+      ...nominees,
+      { title: movieData.Title, year: movieData.Year },
+    ]);
   };
-  const removeNominee = (movieData, index) => {
-    console.log("clicked");
-    console.log({ index });
+  const removeNominee = (movieData) => {
+    const updatedNominees = nominees.filter(
+      (movie) => movie.Title !== movieData.Title
+    );
+    setNominees(updatedNominees);
   };
 
   return (
