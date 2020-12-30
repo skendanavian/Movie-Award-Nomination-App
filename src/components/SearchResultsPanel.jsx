@@ -2,15 +2,18 @@ import SearchListItem from "./SearchListItem";
 import "./SearchResultsPanel.scss";
 
 function SearchResultsPanel({ input, searchResults }) {
-  const searchListItems = searchResults.map((movie, index) => {
-    return <SearchListItem key={index} movieData={movie} />;
-  });
+  let searchResultsList;
+  if (searchResults) {
+    searchResultsList = searchResults.map((movie, index) => {
+      return <SearchListItem key={index} movieData={movie} />;
+    });
+  }
 
   return (
     <div>
       <h3>Results for "{input}" </h3>
       <div>
-        <ul>{searchListItems}</ul>
+        {searchResults ? <ul>{searchResultsList}</ul> : <p>No Results Found</p>}
       </div>
     </div>
   );
