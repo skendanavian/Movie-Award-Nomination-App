@@ -1,11 +1,16 @@
 import "./Button.scss";
 const classNames = require("classnames");
 
-function Button({ key, children, selected, movieData, onClick }) {
-  const btn = classNames("btn", { "btn--selected": selected });
-  console.log(key);
+function Button({ disabled, children, movieData, onClick }) {
+  const btn = classNames("btn" /*, { "btn--disabled": selected }*/);
+
   return (
-    <button type="button" className={btn} onClick={() => onClick(movieData)}>
+    <button
+      type="button"
+      className={btn}
+      onClick={() => onClick(movieData)}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

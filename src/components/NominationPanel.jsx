@@ -1,6 +1,8 @@
 import NominationListItem from "./NominationListItem";
 import "./NominationPanel.scss";
 
+//fix unique key problem happening between the two lists
+
 function NominationPanel({ nominees, removeNominee }) {
   const nominationList = nominees.map((movie) => {
     return (

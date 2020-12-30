@@ -1,14 +1,33 @@
+import { useEffect } from "react";
 import SearchListItem from "./SearchListItem";
 import "./SearchResultsPanel.scss";
 
-function SearchResultsPanel({ input, searchResults, addNominee }) {
+function SearchResultsPanel({ input, searchResults, nominees, addNominee }) {
   let searchResultsList;
+
   if (searchResults) {
-    searchResultsList = searchResults.map((movie, index) => {
-      const key = index;
-      return (
-        <SearchListItem key={index} movieData={movie} addNominee={addNominee} />
-      );
+    searchResultsList = searchResults.map((movie) => {
+      if (!nominees.includes(movie.title)) {
+        return (
+          <SearchListItem
+            disabled={false}
+            key={movie.Title}
+            nominees={nominees}
+            movieData={movie}
+            addNominee={addNominee}
+          />
+        );
+      } else {
+        return (
+          <SearchListItem
+            disabled={true}
+            key={movie.Title}
+            nominees={nominees}
+            movieData={movie}
+            addNominee={addNominee}
+          />
+        );
+      }
     });
   }
 
