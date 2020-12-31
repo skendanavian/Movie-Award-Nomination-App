@@ -1,11 +1,31 @@
 @import "../styles/variables.scss";
 
 .search-bar {
-  width: 70%;
+  width: 80%;
   height: 2em;
   border: 1px solid black;
   border-radius: 4px;
   font-size: 1.3em;
   text-align: center;
   font-family: $primary-font;
+}
+
+.flex-row {
+  width: 500px;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-right: 3em;
+
+  h3 {
+    font-weight: 300;
+  }
+}
+
+.search-icon {
+  margin-right: 1rem;
+  color: $secondary-background-color;
+  font-size: 1.5em;
 }

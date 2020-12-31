@@ -71,7 +71,7 @@ function App() {
       </div>
 
       <SearchPanel handleSearchBar={handleSearchBar} />
-      <div className="flex-row">
+      <div className="flex-row1">
         <SearchResultsPanel
           input={input}
           nominees={nominees}

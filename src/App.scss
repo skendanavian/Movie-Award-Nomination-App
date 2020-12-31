@@ -8,6 +8,10 @@ h3 {
   text-align: center;
 }
 
+h2 {
+  margin-bottom: 0;
+}
+
 .page-container {
   width: 100vw;
   height: 100vh;
@@ -29,15 +33,17 @@ h3 {
 
 .header {
   width: 100vw;
-  background-color: rgba(131, 112, 86, 0.9);
+  background-color: rgb(109, 90, 63);
   top: 0;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 3em;
 
   h1 {
-    font-weight: 400;
+    font-weight: 300;
     font-style: italic;
     color: $secondary-background-color;
     margin: 0.5em 2em;
@@ -50,7 +56,7 @@ h3 {
   }
 }
 
-.flex-row {
+.flex-row1 {
   display: flex;
   margin-top: 2rem;
 }
