@@ -1,0 +1,17 @@
+@import "../styles/variables.scss";
+
+.results-panel {
+  width: 45vw;
+  height: 55vh;
+  margin: 10px;
+  background-color: rgba(247, 247, 247, 1);
+  border-radius: 10px;
+  border: 4px ridge silver;
+
+  li {
+    list-style-type: disc;
+    margin: 18px 8px;
+    font-size: 1rem;
+    text-align: justify;
+  }
+}

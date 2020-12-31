@@ -1,0 +1,17 @@
+@import "../styles/variables.scss";
+
+.nominee-panel {
+  width: 45vw;
+  height: 55vh;
+  margin: 10px;
+  background-color: $secondary-background-color;
+  border-radius: 10px;
+  border: 4px ridge silver;
+
+  li {
+    list-style-type: decimal;
+    margin: 18px 8px;
+    font-size: 1rem;
+    text-align: justify;
+  }
+}

@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 import SearchPanel from "../src/components/SearchPanel";
 import SearchResultsPanel from "../src/components/SearchResultsPanel";
 import NominationPanel from "../src/components/NominationPanel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import "./App.scss";
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
 function App() {
   const [input, setInput] = useState("");
   const [searchList, setSearchList] = useState([]);
-
-  //Maybe Store Nominees as object for ease of checking searchList
   const [nominees, setNominees] = useState([]);
-
   //Move the axios call into the API Helper Eventually
   //Move state and helpers into custom hook --> useApplicationData
   //Could be nice to add loading state/circle while doing axios calls
@@ -24,15 +24,17 @@ function App() {
       )
       .then((response) => {
         //limit results to 3 movies
-        setSearchList(response.data.Search.slice(0, 3));
+        const reducedList = response.data.Search.slice(0, 5);
+        setSearchList(reducedList);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [input]);
+  }, [input, nominees]);
 
-  const handleSearchBar = (value) => {
-    setInput(value.trim());
+  const handleSearchBar = (input) => {
+    setSearchList([]);
+    setInput(input);
   };
 
   const addNominee = (movieData) => {
@@ -46,23 +48,38 @@ function App() {
   };
 
   const removeNominee = (movieData) => {
+    console.log({ movieData });
     const updatedNominees = nominees.filter(
-      (movie) => movie.title !== movieData.title
+      (movie) =>
+        movie.title !== movieData.title && movie.year !== movieData.year
     );
-
+    setSearchList([]);
     setNominees(updatedNominees);
   };
 
   return (
-    <div>
+    <div className="page-container">
+      <div className="header">
+        <div className="icon">
+          <FontAwesomeIcon icon={faFilm} />
+        </div>
+
+        <h1>The Shoppies</h1>
+        <div className="icon">
+          <FontAwesomeIcon icon={faFilm} />
+        </div>
+      </div>
+
       <SearchPanel handleSearchBar={handleSearchBar} />
-      <SearchResultsPanel
-        input={input}
-        nominees={nominees}
-        searchResults={searchList}
-        addNominee={addNominee}
-      />
-      <NominationPanel nominees={nominees} removeNominee={removeNominee} />
+      <div className="flex-row1">
+        <SearchResultsPanel
+          input={input}
+          nominees={nominees}
+          searchResults={searchList}
+          addNominee={addNominee}
+        />
+        <NominationPanel nominees={nominees} removeNominee={removeNominee} />
+      </div>
     </div>
   );
 }

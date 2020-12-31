@@ -7,18 +7,19 @@ function SearchListItem({ nominees, movieData, addNominee }) {
 
   useEffect(() => {
     if (nominees !== undefined) {
-      nominees.find((item) => {
-        if (item.title === movieData.Title) {
+      nominees.forEach((item) => {
+        if (item.title === movieData.Title && item.year === movieData.Year) {
           setSelected(true);
-          return;
         }
-        return;
       });
+    } else {
+      setSelected(false);
     }
-  }, [nominees, movieData, selected]);
+  }, [movieData, nominees]);
+
   return (
     <li>
-      {`${movieData.Title} (${movieData.Year})`}{" "}
+      {`${movieData.Title} (${movieData.Year})`}
       <Button
         selected={selected}
         nominees={nominees}

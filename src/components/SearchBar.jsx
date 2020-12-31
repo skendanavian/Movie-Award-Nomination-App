@@ -1,11 +1,19 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./SearchBar.scss";
 
 function SearchBar({ handleSearchBar }) {
   return (
-    <input
-      placeholder="Enter Movie Title"
-      onChange={(event) => handleSearchBar(event.target.value)}
-    />
+    <div className="flex-row">
+      <div className="search-icon">
+        <FontAwesomeIcon icon={faSearch} />
+      </div>
+      <input
+        className="search-bar"
+        placeholder="Enter Movie Title"
+        onChange={(event) => handleSearchBar(event.target.value)}
+      />
+    </div>
   );
 }
 

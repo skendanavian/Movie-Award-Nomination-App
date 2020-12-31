@@ -1,35 +1,12 @@
 import { useState, useEffect } from "react";
 import "./Button.scss";
 
-const classNames = require("classnames");
-
-function Button({ selected, children, nominees, movieData, onClick }) {
-  // const [selected, setSelected] = useState(false);
-  const btn = classNames("btn", {
-    disabled: selected && children === "Nominate",
-  });
-
-  // useEffect(() => {
-  //   if (children === "Nominate" && nominees !== undefined) {
-  //     nominees.forEach((item) => {
-  //       if (item.title === movieData.Title) {
-  //         setSelected(true);
-  //       } else {
-  //         setSelected(false);
-  //       }
-  //     });
-  //   }
-  // }, [movieData, nominees]);
-
-  // const toggleButton = () => {
-  //   !selected ? setSelected(true) : setSelected(false);
-  // };
-
+function Button({ selected, children, movieData, onClick }) {
   return (
     <button
       disabled={selected}
       type="button"
-      className={btn}
+      className={selected ? "disabled" : "btn"}
       onClick={() => {
         onClick(movieData);
       }}
