@@ -32,6 +32,12 @@ function App() {
       });
   }, [input, nominees]);
 
+  useEffect(() => {
+    if (nominees && nominees.length === 5) {
+      alert("Thanks");
+    }
+  }, [nominees]);
+
   const handleSearchBar = (input) => {
     setSearchList([]);
     setInput(input);

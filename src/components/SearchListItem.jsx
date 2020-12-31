@@ -7,6 +7,10 @@ function SearchListItem({ nominees, movieData, addNominee }) {
 
   useEffect(() => {
     if (nominees !== undefined) {
+      if (nominees.length === 5) {
+        setSelected(true);
+        return;
+      }
       nominees.forEach((item) => {
         if (item.title === movieData.Title && item.year === movieData.Year) {
           setSelected(true);
