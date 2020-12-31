@@ -3,8 +3,8 @@
 h1,
 h2,
 h3 {
-  font-weight: 400;
-  color: black;
+  font-weight: 500;
+  color: rgb(109, 90, 63);
   text-align: center;
 }
 
@@ -15,12 +15,21 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.871),
+      rgba(21, 20, 20, 0.611),
+      rgba(60, 56, 56, 0.501)
+    ),
+    url(https://images.unsplash.com/photo-1527219002998-9e1b7ebedcb5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
   background-color: $secondary-background-color;
+  background-clip: content-box;
+  background-position: center;
 }
 
 .header {
   width: 100vw;
-  background-color: black;
+  background-color: rgba(131, 112, 86, 0.9);
   top: 0;
   position: fixed;
   display: flex;
@@ -30,14 +39,14 @@ h3 {
   h1 {
     font-weight: 400;
     font-style: italic;
-    color: $primary-background-color;
+    color: $secondary-background-color;
     margin: 0.5em 2em;
   }
 
   .icon {
-    color: silver;
+    color: rgb(36, 35, 35);
 
-    font-size: 1.5em;
+    font-size: 2.2em;
   }
 }
 
