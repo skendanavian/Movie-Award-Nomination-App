@@ -38,6 +38,9 @@ function App() {
   useEffect(() => {
     if (nominees && nominees.length === 5) setVisible(true);
     setNomineeNumber(nominees.length);
+    setTimeout(() => {
+      setVisible(false);
+    }, 5000);
   }, [nominees]);
 
   const handleSearchBar = (input) => {
@@ -76,7 +79,7 @@ function App() {
         <h1>Thanks for your nominations!</h1>
       </Popup>
       <div
-        className={!visible ? "page-container" : "page-container dark-overlay"}
+        className={!visible ? "page-container" : "page-container--dark-overlay"}
       >
         >
         <div className="header">

@@ -13,7 +13,7 @@ h2 {
 }
 
 .page-container {
-  animation: fadeIn 1s ease;
+  animation: fadeIn 1.5s ease;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -30,12 +30,10 @@ h2 {
   background-color: $secondary-background-color;
   background-clip: content-box;
   background-position: center;
-}
-.dark-overlay {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(21, 20, 20, 0.997);
-  animation: fadeIn 3s ease;
+
+  &--dark-overlay {
+    opacity: 0;
+  }
 }
 
 .header {
@@ -120,4 +118,27 @@ h2 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 500px) {
+  page-container {
+    height: fit-content;
+    background-repeat: repeat;
+  }
+
+  .search-panel {
+    margin-top: 20em;
+  }
+
+  .header {
+    visibility: hidden;
+  }
+
+  .flex-row1 {
+    flex-direction: column;
+
+    li {
+      font-size: 10px;
+    }
+  }
 }
