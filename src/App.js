@@ -48,8 +48,10 @@ function App() {
   };
 
   const removeNominee = (movieData) => {
+    console.log({ movieData });
     const updatedNominees = nominees.filter(
-      (movie) => movie.title !== movieData.title
+      (movie) =>
+        movie.title !== movieData.title && movie.year !== movieData.year
     );
     setSearchList([]);
     setNominees(updatedNominees);

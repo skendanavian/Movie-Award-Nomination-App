@@ -19,7 +19,7 @@ function SearchListItem({ nominees, movieData, addNominee }) {
 
   return (
     <li>
-      {`${movieData.Title} (${movieData.Year})`}{" "}
+      {`${movieData.Title} (${movieData.Year})`}
       <Button
         selected={selected}
         nominees={nominees}
