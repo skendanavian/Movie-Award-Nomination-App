@@ -27,7 +27,10 @@ function App() {
       )
       .then((response) => {
         //limit results to 3 movies
-        setSearchList(response.data.Search.slice(0, 3));
+
+        const reducedList = response.data.Search.slice(0, 3);
+        console.log(reducedList);
+        setSearchList(reducedList);
       })
       .catch((err) => {
         console.log(err);

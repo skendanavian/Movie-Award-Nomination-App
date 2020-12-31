@@ -1,12 +1,17 @@
 @import "../styles/variables.scss";
 
 .results-panel {
-  width: 55vw;
-  height: 40vh;
+  width: 45vw;
+  height: 55vh;
   margin: 10px;
   background-color: $secondary-background-color;
+  border-radius: 4px;
+  border: 1px solid black;
 
   li {
-    color: $color-secondary;
+    list-style-type: disc;
+    margin: 18px 8px;
+    font-size: 1rem;
+    text-align: justify;
   }
 }
