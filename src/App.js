@@ -3,7 +3,7 @@ import SearchPanel from "../src/components/SearchPanel";
 import SearchResultsPanel from "../src/components/SearchResultsPanel";
 import NominationPanel from "../src/components/NominationPanel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilm, faTicketAlt } from "@fortawesome/free-solid-svg-icons";
+import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import "./App.scss";
 
@@ -12,10 +12,7 @@ const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 function App() {
   const [input, setInput] = useState("");
   const [searchList, setSearchList] = useState([]);
-
-  //Maybe Store Nominees as object for ease of checking searchList
   const [nominees, setNominees] = useState([]);
-
   //Move the axios call into the API Helper Eventually
   //Move state and helpers into custom hook --> useApplicationData
   //Could be nice to add loading state/circle while doing axios calls
@@ -27,9 +24,7 @@ function App() {
       )
       .then((response) => {
         //limit results to 3 movies
-
-        const reducedList = response.data.Search.slice(0, 3);
-        console.log(reducedList);
+        const reducedList = response.data.Search.slice(0, 5);
         setSearchList(reducedList);
       })
       .catch((err) => {
@@ -37,8 +32,9 @@ function App() {
       });
   }, [input]);
 
-  const handleSearchBar = (value) => {
-    setInput(value.trim());
+  const handleSearchBar = (event) => {
+    event.preventDefault();
+    setInput(event.target.value.trim());
   };
 
   const addNominee = (movieData) => {
@@ -55,7 +51,6 @@ function App() {
     const updatedNominees = nominees.filter(
       (movie) => movie.title !== movieData.title
     );
-
     setNominees(updatedNominees);
   };
 
