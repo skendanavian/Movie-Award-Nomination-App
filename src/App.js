@@ -30,11 +30,11 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, [input]);
+  }, [input, nominees]);
 
-  const handleSearchBar = (event) => {
-    event.preventDefault();
-    setInput(event.target.value.trim());
+  const handleSearchBar = (input) => {
+    setSearchList([]);
+    setInput(input);
   };
 
   const addNominee = (movieData) => {
@@ -51,6 +51,7 @@ function App() {
     const updatedNominees = nominees.filter(
       (movie) => movie.title !== movieData.title
     );
+    setSearchList([]);
     setNominees(updatedNominees);
   };
 

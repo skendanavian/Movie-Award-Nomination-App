@@ -5,7 +5,7 @@ function SearchBar({ handleSearchBar }) {
     <input
       className="search-bar"
       placeholder="Enter Movie Title"
-      onChange={(event) => handleSearchBar(event)}
+      onChange={(event) => handleSearchBar(event.target.value)}
     />
   );
 }
