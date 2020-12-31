@@ -32,6 +32,12 @@ function App() {
       });
   }, [input, nominees]);
 
+  useEffect(() => {
+    if (nominees && nominees.length === 5) {
+      alert("Thanks");
+    }
+  }, [nominees]);
+
   const handleSearchBar = (input) => {
     setSearchList([]);
     setInput(input);
@@ -49,9 +55,10 @@ function App() {
 
   const removeNominee = (movieData) => {
     console.log({ movieData });
+    console.log({ nominees });
     const updatedNominees = nominees.filter(
       (movie) =>
-        movie.title !== movieData.title && movie.year !== movieData.year
+        !(movie.title === movieData.title && movie.year === movieData.year)
     );
     setSearchList([]);
     setNominees(updatedNominees);
