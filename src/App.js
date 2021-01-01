@@ -86,7 +86,6 @@ function App() {
       <div
         className={!visible ? "page-container" : "page-container--dark-overlay"}
       >
-        >
         <div className="header">
           <div className="icon">
             <FontAwesomeIcon icon={faFilm} />
