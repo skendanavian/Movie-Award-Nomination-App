@@ -9,6 +9,7 @@
   border: 4px ridge silver;
 
   li {
+    animation: fadeIn 1.5s ease;
     list-style-type: decimal;
     margin: 18px 8px;
     font-size: 1rem;

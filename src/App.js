@@ -40,7 +40,7 @@ function App() {
     setNomineeNumber(nominees.length);
     setTimeout(() => {
       setVisible(false);
-    }, 5000);
+    }, 6000);
   }, [nominees]);
 
   const handleSearchBar = (input) => {
@@ -70,14 +70,19 @@ function App() {
   };
 
   return (
-    <div className="overlay">
-      <Popup
-        className="popup"
-        visible={visible}
-        onClose={() => setVisible(false)}
-      >
-        <h1>Thanks for your nominations!</h1>
-      </Popup>
+    <>
+      {visible && (
+        <div className={visible && "overlay"}>
+          <Popup
+            className="popup"
+            visible={visible}
+            onClose={() => setVisible(false)}
+          >
+            <h1>Thanks for your nominations!</h1>
+          </Popup>
+        </div>
+      )}
+
       <div
         className={!visible ? "page-container" : "page-container--dark-overlay"}
       >
@@ -103,7 +108,7 @@ function App() {
           <NominationPanel nominees={nominees} removeNominee={removeNominee} />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
