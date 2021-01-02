@@ -4,7 +4,7 @@ h1,
 h2,
 h3 {
   font-weight: 500;
-  color: rgb(109, 90, 63);
+  color: black;
   text-align: center;
 }
 
@@ -13,6 +13,7 @@ h2 {
 }
 
 .page-container {
+  animation: fadeIn 1.5s ease;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -21,37 +22,40 @@ h2 {
   justify-content: center;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.871),
-      rgba(21, 20, 20, 0.611),
-      rgba(60, 56, 56, 0.501)
+      rgba(150, 142, 103, 0.963),
+      rgba(159, 142, 100, 0.942),
+      rgba(150, 132, 90, 0.942)
     ),
     url(https://images.unsplash.com/photo-1527219002998-9e1b7ebedcb5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
   background-color: $secondary-background-color;
-  background-clip: content-box;
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
+
+  &--dark-overlay {
+    visibility: hidden;
+  }
 }
 
 .header {
   width: 100vw;
-  background-color: $secondary-background-color;
+  background-color: rgb(0, 0, 0);
   top: 0;
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 2px ridge silver;
   margin-bottom: 3em;
 
   h1 {
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
-    color: rgb(109, 90, 63);
+    text-align: left;
+    color: $primary-background-color;
     margin: 0.5em 2em;
   }
 
   .icon {
-    color: rgb(109, 90, 63);
-
+    display: none;
+    opacity: 60%;
+    color: $secondary-background-color;
     font-size: 1.8em;
   }
 }
@@ -59,4 +63,134 @@ h2 {
 .flex-row1 {
   display: flex;
   margin-top: 2rem;
+}
+
+.overlay {
+  animation: fadeIn 1s ease;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(150, 142, 103, 0.168)),
+    url(https://images.unsplash.com/photo-1578269174936-2709b6aeb913?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  h1 {
+    animation: fadeIn 3s ease;
+    font-size: 3rem;
+    color: white;
+  }
+}
+
+// Multi Browser Compatible Animation for fade in
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+//mobile and tablet styles
+
+@media screen and (max-width: 500px) {
+  .page-container {
+    height: fit-content;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .overlay {
+    animation: fadeIn 0.8s ease;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-bar {
+    width: 100%;
+    height: 2em;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 1.3em;
+    text-align: center;
+    font-family: $primary-font;
+  }
+
+  .search-panel {
+    margin-top: 20px;
+  }
+
+  .results-panel {
+    width: 80vw;
+    height: fit-content;
+    min-height: 50vh;
+    .btn {
+      margin-top: 3px;
+      display: block;
+      height: 1.2rem;
+      font-size: 12px;
+
+      &:disabled {
+        height: 1.2rem;
+      }
+    }
+  }
+
+  .nominee-panel {
+    width: 80vw;
+    height: fit-content;
+    min-height: 50vh;
+    .btn {
+      margin-top: 3px;
+      display: block;
+      height: 1.2rem;
+      font-size: 12px;
+    }
+  }
+
+  .header {
+    visibility: hidden;
+  }
+
+  .flex-row1 {
+    flex-direction: column;
+
+    li {
+      font-size: 12px;
+    }
+  }
 }
