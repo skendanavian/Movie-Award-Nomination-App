@@ -38,10 +38,13 @@ function App() {
   useEffect(() => {
     if (nominees && nominees.length === 5) setVisible(true);
     setNomineeNumber(nominees.length);
+  }, [nominees]);
+
+  if (visible) {
     setTimeout(() => {
       setVisible(false);
-    }, 6000);
-  }, [nominees]);
+    }, 4500);
+  }
 
   const handleSearchBar = (input) => {
     setSearchList([]);
@@ -72,41 +75,37 @@ function App() {
   return (
     <>
       {visible && (
-        <div className={visible && "overlay"}>
-          <Popup
-            className="popup"
-            visible={visible}
-            onClose={() => setVisible(false)}
-          >
-            <h1>Thanks for your nominations!</h1>
-          </Popup>
+        <div className={visible && " page-container overlay"}>
+          <h1>Thanks for your nominations!</h1>
         </div>
       )}
+      {!visible && (
+        <div className={!visible && "page-container"}>
+          <div className="header">
+            <div className="icon">
+              <FontAwesomeIcon icon={faFilm} />
+            </div>
 
-      <div
-        className={!visible ? "page-container" : "page-container--dark-overlay"}
-      >
-        <div className="header">
-          <div className="icon">
-            <FontAwesomeIcon icon={faFilm} />
+            <h1>The Shoppies</h1>
+            <div className="icon">
+              <FontAwesomeIcon icon={faFilm} />
+            </div>
           </div>
-
-          <h1>The Shoppies</h1>
-          <div className="icon">
-            <FontAwesomeIcon icon={faFilm} />
+          <SearchPanel handleSearchBar={handleSearchBar} />
+          <div className="flex-row1">
+            <SearchResultsPanel
+              input={input}
+              nominees={nominees}
+              searchResults={searchList}
+              addNominee={addNominee}
+            />
+            <NominationPanel
+              nominees={nominees}
+              removeNominee={removeNominee}
+            />
           </div>
         </div>
-        <SearchPanel handleSearchBar={handleSearchBar} />
-        <div className="flex-row1">
-          <SearchResultsPanel
-            input={input}
-            nominees={nominees}
-            searchResults={searchList}
-            addNominee={addNominee}
-          />
-          <NominationPanel nominees={nominees} removeNominee={removeNominee} />
-        </div>
-      </div>
+      )}
     </>
   );
 }
