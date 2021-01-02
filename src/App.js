@@ -38,7 +38,7 @@ function App() {
     if (nominees && nominees.length === 5) {
       setTimeout(() => {
         setVisible(true);
-      }, 1200);
+      }, 1000);
     }
     setNomineeNumber(nominees.length);
   }, [nominees]);
@@ -48,7 +48,7 @@ function App() {
   if (visible) {
     setTimeout(() => {
       setVisible(false);
-    }, 5500);
+    }, 5000);
   }
 
   // Live Search Function

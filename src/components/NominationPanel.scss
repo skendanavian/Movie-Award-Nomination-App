@@ -2,7 +2,8 @@
 
 .nominee-panel {
   width: 45vw;
-  height: 55vh;
+  height: fit-content;
+  min-height: 45vh;
   margin: 10px;
   background-color: $secondary-background-color;
   border-radius: 10px;
@@ -11,8 +12,28 @@
   li {
     animation: fadeIn 1s ease;
     list-style-type: decimal;
-    margin: 18px 8px;
+    margin: 18px 10px;
     font-size: 1.1rem;
     text-align: justify;
+  }
+
+  .green-text {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: rgba(0, 128, 0, 0.894);
+  }
+  .red-text {
+    text-align: center;
+    margin-left: 10px;
+    font-size: 1rem;
+    color: rgba(255, 0, 0, 0.84);
+  }
+
+  .count-box {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
   }
 }
