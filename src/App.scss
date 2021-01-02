@@ -33,13 +33,22 @@ h2 {
   //     rgba(150, 132, 90, 0.942)
   //   ),
   //   url(https://images.unsplash.com/photo-1527219002998-9e1b7ebedcb5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
+  // background-image: linear-gradient(
+  //     to bottom,
+  //     rgba(0, 0, 0, 0.894),
+  //     rgba(13, 13, 13, 0.531),
+  //     rgba(0, 0, 0, 0)
+  //   ),
+  //   url(https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_960_720.jpg);
   background-image: linear-gradient(
       to bottom,
       rgb(0, 0, 0),
-      rgba(0, 0, 0, 0.086)
+      rgba(6, 6, 6, 0.853),
+      rgba(16, 16, 16, 0.593),
+      rgba(16, 16, 16, 0),
+      rgba(0, 0, 0, 0.326)
     ),
     url(https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_960_720.jpg);
-
   background-color: $secondary-background-color;
   background-attachment: fixed;
   background-position: center;
@@ -52,19 +61,21 @@ h2 {
 }
 
 .header {
+  // visibility: hidden;
   width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // background-color: $secondary-background-color-low-opacity;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.764);
+  // background-color: transparent;
   top: 0;
   position: fixed;
   margin-bottom: 3em;
 
   h1 {
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 200;
+
+    // font-style: italic;
     text-align: left;
     color: $primary-background-color;
     margin: 0.5em 2em;
@@ -80,17 +91,25 @@ h2 {
 .flex-row1 {
   display: flex;
   margin-top: 2rem;
-  background-color: rgba(0, 0, 0, 0.785);
-  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.819);
+  border-radius: 15px;
 }
 
 .show-page {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.511),
+      rgba(13, 13, 13, 0.696),
+      rgba(0, 0, 0, 0)
+    ),
+    url(https://cdn.pixabay.com/photo/2018/09/15/15/06/oscar-3679610_1280.jpg);
   animation: fadeIn 1s ease;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
   h1 {
     animation: slideIn 2.5s ease;
     font-size: 3rem;
@@ -204,17 +223,26 @@ h2 {
     // justify-content: center;
 
     .results-panel {
+      border-left: none;
       align-items: center;
+      justify-content: center;
       border-bottom: 3px solid rgba(255, 255, 255, 0.702);
       border-right: none;
       ul {
+        margin: auto;
+        padding: 1em;
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: center;
       }
       li {
+        flex-direction: column;
+        display: flex;
         padding: 5px;
         font-size: 1rem;
         text-align: center;
+      }
+      .btn {
+        align-content: center;
       }
     }
 
@@ -222,9 +250,19 @@ h2 {
       border-left: none;
       align-items: center;
     }
-
+    ol {
+      margin: auto;
+      padding: 1em;
+      align-items: flex-start;
+      justify-content: center;
+    }
     li {
+      flex-direction: column;
+      display: flex;
       font-size: 1rem;
+      padding: 5px;
+      font-size: 1rem;
+      text-align: center;
     }
   }
 }
