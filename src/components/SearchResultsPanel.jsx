@@ -18,11 +18,17 @@ function SearchResultsPanel({ input, searchResults, nominees, addNominee }) {
 
   return (
     <div className="results-panel">
-      {input ? <h3>Search Results for "{input}" </h3> : <h3>Search Results</h3>}
+      {input ? (
+        <h3>
+          Searching for <span className="highlighted-text">"{input}"</span>
+        </h3>
+      ) : (
+        <h3>Search Results</h3>
+      )}
 
-      <div>
-        <ul>{searchResultsList}</ul>
-      </div>
+      <ul>
+        <div>{searchResultsList}</div>
+      </ul>
     </div>
   );
 }

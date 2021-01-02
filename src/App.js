@@ -91,6 +91,7 @@ function App() {
         <div className={!visible && "page-container"}>
           <div className="header">
             <h1>The Shoppies</h1>
+            <h3>Instructions</h3>
           </div>
           <SearchPanel handleSearchBar={handleSearchBar} />
           <div className="flex-row1">

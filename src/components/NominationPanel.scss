@@ -3,30 +3,39 @@
 .nominee-panel {
   width: 45vw;
   height: fit-content;
-  min-height: 45vh;
-  margin: 10px;
-  background-color: $secondary-background-color;
-  border-radius: 10px;
-  border: 4px ridge silver;
+  min-height: 48vh;
+  margin: 1.5rem 0px;
+  // background-color: $secondary-background-color-low-opacity;
+  background-color: transparent;
+  // border-left: 3px solid rgba(255, 255, 255, 0.702);
+  border-radius: 0;
+
+  ol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0;
+  }
 
   li {
     animation: fadeIn 1s ease;
     list-style-type: decimal;
     margin: 18px 10px;
-    font-size: 1.1rem;
+    font-size: 1.05em;
     text-align: justify;
   }
 
   .green-text {
     margin-left: 10px;
     font-size: 1rem;
-    color: rgba(0, 128, 0, 0.894);
+    color: rgba(70, 203, 70, 0.949);
   }
   .red-text {
     text-align: center;
     margin-left: 10px;
     font-size: 1rem;
-    color: rgba(255, 0, 0, 0.84);
+    color: rgba(225, 44, 44, 0.901);
   }
 
   .count-box {
