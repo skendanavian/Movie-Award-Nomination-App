@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `http://www.omdbapi.com/?s=${input.toLowerCase()}&type=movie&page=1&apikey=${API_KEY}`
+        `http://www.omdbapi.com/?s=${input.toLowerCase()}&type=movie&page=1&apikey=43b729f`
       )
       .then((response) => {
         //limit results to 5 movies for panel
