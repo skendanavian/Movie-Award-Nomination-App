@@ -44,9 +44,9 @@ h2 {
       to bottom,
       rgb(0, 0, 0),
       rgba(6, 6, 6, 0.853),
-      rgba(16, 16, 16, 0.593),
+      rgba(16, 16, 16, 0.408),
       rgba(16, 16, 16, 0),
-      rgba(0, 0, 0, 0.326)
+      rgba(0, 0, 0, 0.696)
     ),
     url(https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_960_720.jpg);
   background-color: $secondary-background-color;
@@ -96,6 +96,7 @@ h2 {
 }
 
 .show-page {
+  animation: fadeIn 2s linear;
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.511),
@@ -103,7 +104,6 @@ h2 {
       rgba(0, 0, 0, 0)
     ),
     url(https://cdn.pixabay.com/photo/2018/09/15/15/06/oscar-3679610_1280.jpg);
-  animation: fadeIn 1s ease;
   width: 100vw;
   height: 100vh;
   display: flex;
