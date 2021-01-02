@@ -28,9 +28,12 @@
 
 @media screen and (max-width: 500px) {
   .search-panel {
+    h2 {
+      font-size: 2rem;
+    }
     .search-bar {
       width: 250px;
-      font-size: 12px;
+      font-size: 1em;
 
       .flex-row {
         width: 250px;

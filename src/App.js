@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import SearchPanel from "../src/components/SearchPanel";
 import SearchResultsPanel from "../src/components/SearchResultsPanel";
 import NominationPanel from "../src/components/NominationPanel";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilm } from "@fortawesome/free-solid-svg-icons";
-import Popup from "react-animated-popup";
+import CircleLoader from "react-spinners/CircleLoader";
 import axios from "axios";
 import "./App.scss";
 
@@ -16,10 +14,9 @@ function App() {
   const [nominees, setNominees] = useState([]);
   const [nomineeNumber, setNomineeNumber] = useState(0);
   const [visible, setVisible] = useState(false);
-  //Move the axios call into the API Helper Eventually
-  //Move state and helpers into custom hook --> useApplicationData
-  //Could be nice to add loading state/circle while doing axios calls
-  //Could use imdbID as keys
+
+  // API call to Movie DB on input change
+
   useEffect(() => {
     axios
       .get(
@@ -35,16 +32,26 @@ function App() {
       });
   }, [input, nominees]);
 
+  // When nominee list is 5 -> sets submit page to visible
+
   useEffect(() => {
-    if (nominees && nominees.length === 5) setVisible(true);
+    if (nominees && nominees.length === 5) {
+      setTimeout(() => {
+        setVisible(true);
+      }, 1200);
+    }
     setNomineeNumber(nominees.length);
   }, [nominees]);
+
+  // Show Submit page for 5.5 seconds and then back to home page
 
   if (visible) {
     setTimeout(() => {
       setVisible(false);
-    }, 4500);
+    }, 5500);
   }
+
+  // Live Search Function
 
   const handleSearchBar = (input) => {
     setSearchList([]);
@@ -75,21 +82,15 @@ function App() {
   return (
     <>
       {visible && (
-        <div className={visible && " page-container overlay"}>
-          <h1>Thanks for your nominations!</h1>
+        <div className={visible && " page-container show-page"}>
+          <h1>Submitting Nominations!</h1>
+          <CircleLoader color="white" loading={visible} size={150} />
         </div>
       )}
       {!visible && (
         <div className={!visible && "page-container"}>
           <div className="header">
-            <div className="icon">
-              <FontAwesomeIcon icon={faFilm} />
-            </div>
-
             <h1>The Shoppies</h1>
-            <div className="icon">
-              <FontAwesomeIcon icon={faFilm} />
-            </div>
           </div>
           <SearchPanel handleSearchBar={handleSearchBar} />
           <div className="flex-row1">
@@ -100,6 +101,7 @@ function App() {
               addNominee={addNominee}
             />
             <NominationPanel
+              nomineeTotal={nomineeNumber}
               nominees={nominees}
               removeNominee={removeNominee}
             />
