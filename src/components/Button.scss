@@ -14,15 +14,16 @@
     cursor: pointer;
     background-color: rgba(131, 112, 86, 0.7);
   }
-}
 
-.disabled {
-  height: 2em;
-  border-radius: 4px;
-  border: 1px solid black;
-  color: white;
-  margin-left: 5px;
-  background-color: rgba(122, 118, 114, 0.764);
-  opacity: 50%;
-  cursor: not-allowed;
+  .disabled {
+    z-index: 4;
+    height: 2em;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: white;
+    margin-left: 5px;
+    background-color: rgba(122, 118, 114, 0.764);
+    opacity: 50%;
+    cursor: not-allowed;
+  }
 }

@@ -48,7 +48,7 @@ function App() {
   if (visible) {
     setTimeout(() => {
       setVisible(false);
-    }, 5000);
+    }, 4500);
   }
 
   // Live Search Function
