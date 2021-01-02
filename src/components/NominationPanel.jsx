@@ -3,7 +3,7 @@ import "./NominationPanel.scss";
 
 //fix unique key problem happening between the two lists
 
-function NominationPanel({ nominees, removeNominee }) {
+function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
   let nominationList;
 
   if (nominees) {
@@ -20,7 +20,12 @@ function NominationPanel({ nominees, removeNominee }) {
 
   return (
     <div className="nominee-panel">
-      <h3>Nominations</h3>
+      {nomineeTotal < 5 && <h3>Nominations</h3>}
+      {nomineeTotal === 5 && (
+        <>
+          <h3>Nominations (maximum reached)</h3>
+        </>
+      )}
       <ol>
         <div>{nominationList}</div>
       </ol>
