@@ -92,7 +92,11 @@ function App() {
         <div className={!visible && "page-container"}>
           <div className="header">
             <div className="site-logo-container">
-              <img className="camera-icon" src={movieCamera} />
+              <img
+                className="camera-icon"
+                src={movieCamera}
+                alt="movie-camera-icon"
+              />
               <h1>The Shoppies</h1>
             </div>
             <h2>About</h2>
