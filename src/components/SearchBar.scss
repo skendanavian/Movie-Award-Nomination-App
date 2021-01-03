@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1em;
+
   padding-right: 3em;
 }
 
@@ -27,6 +27,7 @@
 }
 
 input {
+  background-color: $secondary-background-color;
   box-shadow: rgba(46, 44, 44, 0.25) 0px 54px 55px,
     rgba(60, 58, 58, 0.12) 0px -12px 30px, rgba(118, 117, 117, 0.12) 0px 4px 6px,
     rgba(60, 58, 58, 0.17) 0px 12px 13px, rgba(43, 43, 42, 0.3) 0px -3px 5px;
@@ -35,18 +36,18 @@ input {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .search-panel {
-    h2 {
-      font-size: 2rem;
-    }
-    .search-bar {
-      width: 250px;
-      font-size: 1em;
+// @media screen and (max-width: 500px) {
+//   .search-panel {
+//     h2 {
+//       font-size: 2rem;
+//     }
+//     .search-bar {
+//       width: 250px;
+//       font-size: 1em;
 
-      .flex-row {
-        width: 250px;
-      }
-    }
-  }
-}
+//       .flex-row {
+//         width: 250px;
+//       }
+//     }
+//   }
+// }

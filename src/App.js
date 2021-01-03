@@ -5,7 +5,9 @@ import NominationPanel from "../src/components/NominationPanel";
 import movieCamera from "./components/images/movieCamera.png";
 import CircleLoader from "react-spinners/CircleLoader";
 import axios from "axios";
+// import "./components/SearchPanel.scss";
 import "./App.scss";
+import "./styles/mediaQueries.scss";
 
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
@@ -49,7 +51,7 @@ function App() {
   if (submissionView) {
     setTimeout(() => {
       setSubmissionView(false);
-    }, 5000);
+    }, 4500);
   }
 
   // Live Search Function
@@ -87,7 +89,7 @@ function App() {
           <h1>Submitting Nominations!</h1>
           <CircleLoader color={"#b1b1ae"} loading={submissionView} size={170} />
 
-          <h3 className="fade-in">
+          <h3 className="thankyou-message">
             Thanks for submitting to the 2021 Shoppie Awards!
           </h3>
         </div>
@@ -103,7 +105,7 @@ function App() {
               />
               <h1>The Shoppies</h1>
             </div>
-            <h2>2021 Nomination Form</h2>
+            <h2 className="desktop-heading">2021 Movie Awards</h2>
           </div>
           <SearchPanel handleSearchBar={handleSearchBar} />
 

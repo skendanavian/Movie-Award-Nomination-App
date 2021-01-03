@@ -13,24 +13,26 @@
   ol {
     display: flex;
     margin: 0;
-    list-style-type: decimal;
-
-    li {
-      animation: fadeIn 1s ease;
-      // list-style-type: decimal;
-      color: $secondary-background-color;
-      display: flex;
-      margin: 1.2rem 10px;
-      font-size: 1.05em;
-      text-align: justify;
-      align-items: center;
-    }
+    // list-style-type: decimal;
   }
 
-  .green-text {
+  li {
+    font-family: $primary-font;
+    animation: fadeIn 1s ease;
+    list-style-type: decimal;
+    color: rgb(38, 38, 38);
+    display: flex;
+    margin: 1rem 10px;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: justify;
+    align-items: center;
+  }
+
+  .counter-text {
     margin-left: 10px;
     font-size: 1.3rem;
-    color: $accent-color;
+    color: rgb(38, 38, 38);
   }
   .red-text {
     text-align: center;

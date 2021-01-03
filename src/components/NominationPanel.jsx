@@ -24,7 +24,7 @@ function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
         {nomineeTotal <= 5 && (
           <>
             <h3>Nominations</h3>
-            <p className="green-text">({nomineeTotal} / 5)</p>
+            <p className="counter-text">({nomineeTotal} / 5)</p>
           </>
         )}
         {/* {nomineeTotal === 5 && (
