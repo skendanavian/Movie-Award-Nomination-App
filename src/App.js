@@ -87,7 +87,7 @@ function App() {
       {submissionView && (
         <div className={submissionView && " page-container show-page"}>
           <h1>Submitting Nominations!</h1>
-          <CircleLoader color={"#b1b1ae"} loading={submissionView} size={170} />
+          <CircleLoader color={"#39276f"} loading={submissionView} size={170} />
 
           <h3 className="thankyou-message">
             Thanks for submitting to the 2021 Shoppie Awards!

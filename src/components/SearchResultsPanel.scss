@@ -6,7 +6,7 @@
   min-height: 50vh;
   margin: 1.5rem 0px;
   background-color: transparent;
-  border-right: 3px solid $accent-color;
+  border-right: 3px solid rgb(162, 160, 160);
 
   ul {
     color: rgb(38, 38, 38);
@@ -27,6 +27,6 @@
   }
 
   .highlighted-text {
-    color: rgb(38, 38, 38);
+    color: $primary-font;
   }
 }

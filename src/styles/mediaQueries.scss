@@ -59,6 +59,8 @@
   }
 
   .header {
+    z-index: 20;
+    background-color: black;
     padding-top: 10px;
     justify-content: center;
     .site-logo-container {
@@ -70,7 +72,7 @@
     flex-direction: column;
     .results-panel {
       border-left: none;
-      border-bottom: 3px solid rgba(255, 255, 255, 0.702);
+      border-bottom: 3px solid $color-primary;
       border-right: none;
       ul {
         margin: auto;
