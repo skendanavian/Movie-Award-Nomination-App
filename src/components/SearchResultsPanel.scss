@@ -3,27 +3,29 @@
 .results-panel {
   width: 45vw;
   height: fit-content;
-  min-height: 48vh;
+  min-height: 50vh;
   margin: 1.5rem 0px;
   background-color: transparent;
-  border-right: 3px solid rgba(255, 255, 255, 0.654);
+  border-right: 3px solid rgba(255, 255, 255, 0.837);
 
   ul {
     color: white;
     display: flex;
     flex-direction: column;
 
-    align-items: center;
+    // align-items: center;
     margin: auto;
   }
 
   li {
+    display: flex;
     list-style-type: none;
-    margin: 18px auto;
+    margin: 1.2rem 10px;
     font-size: 1.05em;
+    text-align: justify;
   }
 
   .highlighted-text {
-    color: rgba(225, 44, 44, 0.901);
+    color: rgba(70, 203, 70, 0.949);
   }
 }

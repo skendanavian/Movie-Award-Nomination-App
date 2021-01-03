@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import SearchPanel from "../src/components/SearchPanel";
 import SearchResultsPanel from "../src/components/SearchResultsPanel";
 import NominationPanel from "../src/components/NominationPanel";
+import movieCamera from "./components/images/movieCamera.png";
 import CircleLoader from "react-spinners/CircleLoader";
 import axios from "axios";
 import "./App.scss";
@@ -84,13 +85,16 @@ function App() {
       {visible && (
         <div className={visible && " page-container show-page"}>
           <h1>Submitting Nominations!</h1>
-          <CircleLoader color="white" loading={visible} size={150} />
+          <CircleLoader color={"white"} loading={visible} size={150} />
         </div>
       )}
       {!visible && (
         <div className={!visible && "page-container"}>
           <div className="header">
-            <h1>The Shoppies</h1>
+            <div className="site-logo-container">
+              <img className="camera-icon" src={movieCamera} />
+              <h1>The Shoppies</h1>
+            </div>
             <h3>About</h3>
           </div>
           <SearchPanel handleSearchBar={handleSearchBar} />

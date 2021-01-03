@@ -1,6 +1,16 @@
 @import "./styles/variables.scss";
 
+h1,
+h2,
+h3 {
+  text-shadow: 0px 4px 3px rgba(130, 130, 130, 0.4),
+    0px 8px 13px rgba(163, 163, 163, 0.1),
+    0px 18px 23px rgba(150, 150, 150, 0.1);
+}
+
 h1 {
+  font-family: $heading-font;
+  text-transform: uppercase;
   font-weight: 500;
   color: darken($primary-background-color, 30%);
   text-align: center;
@@ -8,10 +18,12 @@ h1 {
 
 h2,
 h3 {
+  font-family: $heading-font;
+  text-transform: uppercase;
   font-weight: 500;
   color: lighten($primary-background-color, 5%);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 h2 {
@@ -21,7 +33,7 @@ h2 {
 .page-container {
   animation: fadeIn 1.5s ease;
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,20 +52,22 @@ h2 {
   //     rgba(0, 0, 0, 0)
   //   ),
   //   url(https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_960_720.jpg);
-  background-image: linear-gradient(
-      to bottom,
-      rgb(0, 0, 0),
-      rgba(6, 6, 6, 0.853),
-      rgba(16, 16, 16, 0.408),
-      rgba(16, 16, 16, 0),
-      rgba(0, 0, 0, 0.696)
-    ),
-    url(https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_960_720.jpg);
-  background-color: $secondary-background-color;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-image: linear-gradient(
+  //     to bottom,
+  //     rgb(0, 0, 0),
+  //     rgba(6, 6, 6, 0.853),
+  //     rgba(16, 16, 16, 0.408),
+  //     rgba(16, 16, 16, 0),
+  //     rgba(0, 0, 0, 0.696)
+  //   ),
+  //   url(https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_960_720.jpg);
+  background-color: #141415;
+  // background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+
+  // background-attachment: fixed;
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 
   &--dark-overlay {
     visibility: hidden;
@@ -67,41 +81,56 @@ h2 {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.764);
-  // background-color: transparent;
+  background-color: transparent;
   top: 0;
   position: fixed;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 
   h1 {
-    font-weight: 200;
-
+    font-size: 2rem;
     // font-style: italic;
     text-align: left;
     color: $primary-background-color;
-    margin: 0.5em 2em;
+    margin: 10px;
   }
   h3 {
     font-weight: 400;
-    color: $primary-background-color;
+    color: $heading-font;
     margin: 0;
     padding: 0 2rem;
+  }
+
+  .site-logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .camera-icon {
+    margin: 15px 5px 15px 10px;
+    border-radius: 8px;
+    background-color: $primary-background-color;
+    height: 3rem;
   }
 }
 
 .flex-row1 {
   display: flex;
   margin-top: 2rem;
-  background-color: rgba(0, 0, 0, 0.819);
+  background-color: #5c5c5ce0;
   border-radius: 15px;
+  box-shadow: rgba(46, 44, 44, 0.25) 0px 54px 55px,
+    rgba(60, 58, 58, 0.12) 0px -12px 30px, rgba(118, 117, 117, 0.12) 0px 4px 6px,
+    rgba(60, 58, 58, 0.17) 0px 12px 13px, rgba(43, 43, 42, 0.3) 0px -3px 5px;
 }
 
 .show-page {
   animation: fadeIn 1.5s ease;
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.511),
-      rgba(13, 13, 13, 0.696),
-      rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 0.755),
+      rgba(13, 13, 13, 0.672),
+      rgba(0, 0, 0, 0.576)
     ),
     url(https://cdn.pixabay.com/photo/2018/09/15/15/06/oscar-3679610_1280.jpg);
   width: 100vw;
@@ -113,7 +142,7 @@ h2 {
   h1 {
     animation: slideIn 2.5s ease;
     font-size: 3rem;
-    color: white;
+    color: $primary-background-color;
   }
 }
 
@@ -195,10 +224,11 @@ h2 {
     margin-top: 20px;
   }
 
-  .btn {
-    margin-top: 3px;
-    display: block;
+  button {
+    // margin-top: 3px;
+    // display: block;
     height: 1.4rem;
+    width: 5rem;
     font-size: 14px;
   }
 
@@ -224,8 +254,8 @@ h2 {
 
     .results-panel {
       border-left: none;
-      align-items: center;
-      justify-content: center;
+      // align-items: center;
+      // justify-content: center;
       border-bottom: 3px solid rgba(255, 255, 255, 0.702);
       border-right: none;
       ul {
@@ -235,11 +265,11 @@ h2 {
         justify-content: center;
       }
       li {
-        flex-direction: column;
+        // flex-direction: column;
         display: flex;
         padding: 5px;
         font-size: 1rem;
-        text-align: center;
+        text-align: justify;
       }
       .btn {
         align-content: center;
@@ -253,16 +283,16 @@ h2 {
     ol {
       margin: auto;
       padding: 1em;
-      align-items: flex-start;
-      justify-content: center;
+      // align-items: flex-start;
+      // justify-content: center;
     }
     li {
-      flex-direction: column;
+      // flex-direction: column;
       display: flex;
       font-size: 1rem;
       padding: 5px;
       font-size: 1rem;
-      text-align: center;
+      text-align: justify;
     }
   }
 }

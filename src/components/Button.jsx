@@ -5,7 +5,7 @@ function Button({ selected, children, movieData, onClick }) {
     <button
       disabled={selected}
       type="button"
-      className={selected ? "disabled" : "btn"}
+      className={"btn"}
       onClick={() => {
         onClick(movieData);
       }}

@@ -4,10 +4,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
-$primary-background-color: rgb(189, 169, 123);
+$primary-background-color: #ffce00;
 $secondary-background-color: rgb(249, 249, 249);
 $secondary-background-color-low-opacity: rgba(255, 255, 255, 0.887);
 $color-primary: rgb(74, 74, 74);
 $color-secondary: rgb(0, 0, 0);
 // $primary-font: "Open Sans", sans-serif;
-$primary-font: Helvetica, sans-serif;
+$primary-font: "Open Sans", sans-serif;
+$heading-font: "Oswald", sans-serif;
