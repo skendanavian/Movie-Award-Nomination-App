@@ -39,20 +39,26 @@ p{font-size: 16px;
 
     <p align='center'>Home (No search Items or Nominees)</p>
     <p align="center">
-      <img src="https://github.com/dpletzke/lets-get-trivial/blob/master/DOCS/Home.png?raw=true" height="400">
-      <img src="https://github.com/dpletzke/lets-get-trivial/blob/master/DOCS/Waiting_room.png?raw=true" height="400">
+      <img src="https://github.com/skendanavian/shopify-intern-challenge-2021/blob/main/docs/home.png?raw=true" >
+    >
     </p>
   </p>
-    <p align='center'>Home (With Search Items and Nominees)</p>
-    <p align="center">
-      <img src="https://github.com/dpletzke/lets-get-trivial/blob/master/DOCS/Home.png?raw=true" height="400">
-      <img src="https://github.com/dpletzke/lets-get-trivial/blob/master/DOCS/Waiting_room.png?raw=true" height="400">
+    <p align='center'>Home (With Search Items and  5 Nominees)</p>
+     <p align="center">
+      <img src="https://github.com/skendanavian/shopify-intern-challenge-2021/blob/main/docs/homeSearch.png?raw=true" >
+    >
+    </p>
+  </p>
+    <p align='center'>Home (With Search Items and less than 5 Nominees)</p>
+     <p align="center">
+      <img src="https://github.com/skendanavian/shopify-intern-challenge-2021/blob/main/docs/homeSearch2.png?raw=true" >
+    >
     </p>
   </p>
     <p align='center'>Submission Animation Page</p>
     <p align="center">
-      <img src="https://github.com/dpletzke/lets-get-trivial/blob/master/DOCS/Home.png?raw=true" height="400">
-      <img src="https://github.com/dpletzke/lets-get-trivial/blob/master/DOCS/Waiting_room.png?raw=true" height="400">
+      <img src="https://github.com/skendanavian/shopify-intern-challenge-2021/blob/main/docs/submission.png?raw=true" >
+     
     </p>
   </p>
 
