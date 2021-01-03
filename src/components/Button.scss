@@ -16,7 +16,7 @@ button {
   border-radius: 20px;
   text-align: center;
   outline: none;
-  box-shadow: rgba(135, 135, 135, 0.25) 0px 54px 40px,
+  box-shadow: rgba(135, 135, 135, 0.25) 0px 70px 60px,
     rgba(161, 161, 161, 0.12) 0px -12px 20px,
     rgba(185, 184, 184, 0.12) 0px 4px 6px,
     rgba(156, 154, 154, 0.17) 0px 12px 13px,
@@ -26,13 +26,10 @@ button {
     transform: scale(1.06, 1.06);
     opacity: 85%;
     cursor: pointer;
-    outline: none;
+    // outline: none;
   }
-}
 
-button {
   &:disabled {
-    // color: rgb(38, 38, 38);
     opacity: 55%;
   }
 }
