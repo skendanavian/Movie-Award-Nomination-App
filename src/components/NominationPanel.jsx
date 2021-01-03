@@ -1,8 +1,6 @@
 import NominationListItem from "./NominationListItem";
 import "./NominationPanel.scss";
 
-//fix unique key problem happening between the two lists
-
 function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
   let nominationList;
 
@@ -27,12 +25,6 @@ function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
             <p className="counter-text">({nomineeTotal} / 5)</p>
           </>
         )}
-        {/* {nomineeTotal === 5 && (
-          <>
-            <h3>Nominations</h3>
-            <p className="red-text">({nomineeTotal} / 5)</p> */}
-        {/* </>
-        )} */}
       </div>
 
       <ol>
