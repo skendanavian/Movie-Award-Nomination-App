@@ -3,7 +3,7 @@
 .nominee-panel {
   width: 45vw;
   min-height: 50vh;
-  margin: 1.5rem 0px;
+  margin: 0.8rem 0px;
   background-color: transparent;
   border-radius: 0;
 
@@ -16,7 +16,7 @@
     font-family: $primary-font;
     animation: fadeIn 1s ease;
     list-style-type: decimal;
-    color: rgb(38, 38, 38);
+    color: $primary-background-color;
     display: flex;
     margin: 1rem 10px;
     font-size: 1em;

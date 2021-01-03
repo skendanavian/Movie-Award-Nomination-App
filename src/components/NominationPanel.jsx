@@ -29,9 +29,9 @@ function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
       {nomineeTotal === 0 && (
         <>
           <p className="status-text">
-            Instructions: <br />
+            <h3>How it works</h3>
             1. Search for movie titles <br />
-            2. Nominate exactly 5 movies <br />
+            2. Nominate 5 movies <br />
             3. Submit your nominations
             <br />
           </p>

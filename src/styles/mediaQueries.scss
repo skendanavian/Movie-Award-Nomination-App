@@ -1,7 +1,7 @@
 // mobile and tablet styles
 @import "./variables.scss";
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 725px) {
   .page-container {
     height: fit-content;
     background-attachment: fixed;
@@ -116,8 +116,16 @@
   .flex-row1 {
     flex-direction: column;
 
-    li {
-      font-size: 12px;
+    .status-text {
+      font-size: 14px;
+      margin: 10px 5px;
+    }
+
+    .nominee-panel ol li {
+      font-size: 14px;
+    }
+    .results-panel ul li {
+      font-size: 14px;
     }
   }
 }
