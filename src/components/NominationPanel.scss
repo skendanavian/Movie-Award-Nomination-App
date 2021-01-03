@@ -12,15 +12,13 @@
 
   ol {
     display: flex;
-    // justify-content: center;
-    // align-items: center;
-    color: $secondary-background-color;
     margin: 0;
+    list-style-type: decimal;
 
     li {
       animation: fadeIn 1s ease;
-      list-style-type: decimal;
-      color: white;
+      // list-style-type: decimal;
+      color: $secondary-background-color;
       display: flex;
       margin: 1.2rem 10px;
       font-size: 1.05em;

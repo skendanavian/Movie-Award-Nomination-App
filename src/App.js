@@ -103,7 +103,7 @@ function App() {
               />
               <h1>The Shoppies</h1>
             </div>
-            <h2>About</h2>
+            <h2>2021 Nomination Form</h2>
           </div>
           <SearchPanel handleSearchBar={handleSearchBar} />
 
