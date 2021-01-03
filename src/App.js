@@ -14,7 +14,7 @@ function App() {
   const [searchList, setSearchList] = useState([]);
   const [nominees, setNominees] = useState([]);
   const [nomineeNumber, setNomineeNumber] = useState(0);
-  const [visible, setVisible] = useState(false);
+  const [submissionView, setSubmissionView] = useState(false);
 
   // API call to Movie DB on input change
 
@@ -33,12 +33,12 @@ function App() {
       });
   }, [input, nominees]);
 
-  // When nominee list is 5 -> sets submit page to visible
+  // When nominee list is 5 -> sets submit page to submissionView
 
   useEffect(() => {
     if (nominees && nominees.length === 5) {
       setTimeout(() => {
-        setVisible(true);
+        setSubmissionView(true);
       }, 1000);
     }
     setNomineeNumber(nominees.length);
@@ -46,10 +46,10 @@ function App() {
 
   // Show Submit page for 4.5 seconds and then back to home page
 
-  if (visible) {
+  if (submissionView) {
     setTimeout(() => {
-      setVisible(false);
-    }, 4500);
+      setSubmissionView(false);
+    }, 5000);
   }
 
   // Live Search Function
@@ -82,14 +82,18 @@ function App() {
 
   return (
     <>
-      {visible && (
-        <div className={visible && " page-container show-page"}>
+      {submissionView && (
+        <div className={submissionView && " page-container show-page"}>
           <h1>Submitting Nominations!</h1>
-          <CircleLoader color={"white"} loading={visible} size={150} />
+          <CircleLoader color={"#b1b1ae"} loading={submissionView} size={170} />
+
+          <h3 className="fade-in">
+            Thanks for submitting to the 2021 Shoppie Awards!
+          </h3>
         </div>
       )}
-      {!visible && (
-        <div className={!visible && "page-container"}>
+      {!submissionView && (
+        <div className={!submissionView && "page-container"}>
           <div className="header">
             <div className="site-logo-container">
               <img
@@ -102,11 +106,7 @@ function App() {
             <h2>About</h2>
           </div>
           <SearchPanel handleSearchBar={handleSearchBar} />
-          {nominees.length === 5 && (
-            <p className="alert-text">
-              You have reached the maximum number of nominations!
-            </p>
-          )}
+
           <div className="flex-row1">
             <SearchResultsPanel
               input={input}

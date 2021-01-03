@@ -2,7 +2,7 @@
 
 .nominee-panel {
   width: 45vw;
-  height: fit-content;
+  // height: fit-content;
   min-height: 50vh;
   margin: 1.5rem 0px;
   // background-color: $secondary-background-color-low-opacity;
@@ -14,7 +14,7 @@
     display: flex;
     // justify-content: center;
     // align-items: center;
-    color: white;
+    color: $secondary-background-color;
     margin: 0;
 
     li {
@@ -32,7 +32,7 @@
   .green-text {
     margin-left: 10px;
     font-size: 1.3rem;
-    color: rgba(70, 203, 70, 0.949);
+    color: $accent-color;
   }
   .red-text {
     text-align: center;
