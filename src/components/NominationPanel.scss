@@ -3,7 +3,7 @@
 .nominee-panel {
   width: 45vw;
   height: fit-content;
-  min-height: 48vh;
+  min-height: 50vh;
   margin: 1.5rem 0px;
   // background-color: $secondary-background-color-low-opacity;
   background-color: transparent;
@@ -12,23 +12,26 @@
 
   ol {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     color: white;
     margin: 0;
-  }
 
-  li {
-    animation: fadeIn 1s ease;
-    list-style-type: decimal;
-    margin: 18px 10px;
-    font-size: 1.05em;
-    text-align: justify;
+    li {
+      animation: fadeIn 1s ease;
+      list-style-type: decimal;
+      color: white;
+      display: flex;
+      margin: 1.2rem 10px;
+      font-size: 1.05em;
+      text-align: justify;
+      align-items: center;
+    }
   }
 
   .green-text {
     margin-left: 10px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: rgba(70, 203, 70, 0.949);
   }
   .red-text {
@@ -36,6 +39,10 @@
     margin-left: 10px;
     font-size: 1rem;
     color: rgba(225, 44, 44, 0.901);
+  }
+
+  .block {
+    display: block;
   }
 
   .count-box {

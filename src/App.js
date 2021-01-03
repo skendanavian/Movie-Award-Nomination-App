@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import SearchPanel from "../src/components/SearchPanel";
 import SearchResultsPanel from "../src/components/SearchResultsPanel";
 import NominationPanel from "../src/components/NominationPanel";
+import movieCamera from "./components/images/movieCamera.png";
 import CircleLoader from "react-spinners/CircleLoader";
 import axios from "axios";
 import "./App.scss";
@@ -43,7 +44,7 @@ function App() {
     setNomineeNumber(nominees.length);
   }, [nominees]);
 
-  // Show Submit page for 5.5 seconds and then back to home page
+  // Show Submit page for 4.5 seconds and then back to home page
 
   if (visible) {
     setTimeout(() => {
@@ -84,16 +85,24 @@ function App() {
       {visible && (
         <div className={visible && " page-container show-page"}>
           <h1>Submitting Nominations!</h1>
-          <CircleLoader color="white" loading={visible} size={150} />
+          <CircleLoader color={"white"} loading={visible} size={150} />
         </div>
       )}
       {!visible && (
         <div className={!visible && "page-container"}>
           <div className="header">
-            <h1>The Shoppies</h1>
-            <h3>About</h3>
+            <div className="site-logo-container">
+              <img className="camera-icon" src={movieCamera} />
+              <h1>The Shoppies</h1>
+            </div>
+            <h2>About</h2>
           </div>
           <SearchPanel handleSearchBar={handleSearchBar} />
+          {nominees.length === 5 && (
+            <p className="alert-text">
+              You have reached the maximum number of nominations!
+            </p>
+          )}
           <div className="flex-row1">
             <SearchResultsPanel
               input={input}

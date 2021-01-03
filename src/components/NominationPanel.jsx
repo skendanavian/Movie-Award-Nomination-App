@@ -21,18 +21,18 @@ function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
   return (
     <div className="nominee-panel">
       <div className="count-box">
-        {nomineeTotal < 5 && (
+        {nomineeTotal <= 5 && (
           <>
             <h3>Nominations</h3>
             <p className="green-text">({nomineeTotal} / 5)</p>
           </>
         )}
-        {nomineeTotal === 5 && (
+        {/* {nomineeTotal === 5 && (
           <>
             <h3>Nominations</h3>
-            <p className="red-text">({nomineeTotal} / 5)</p>
-          </>
-        )}
+            <p className="red-text">({nomineeTotal} / 5)</p> */}
+        {/* </>
+        )} */}
       </div>
 
       <ol>
