@@ -1,3 +1,12 @@
+<style>
+h3{
+  font-size: 16px;
+}
+p{font-size: 16px;
+}
+
+</style>
+
 # The Shoppies - Movie Award Nomination App
 
 ## 2021 Shopify Internship Challenge
