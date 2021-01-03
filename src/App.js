@@ -44,7 +44,7 @@ function App() {
     setNomineeNumber(nominees.length);
   }, [nominees]);
 
-  // Show Submit page for 5.5 seconds and then back to home page
+  // Show Submit page for 4.5 seconds and then back to home page
 
   if (visible) {
     setTimeout(() => {
@@ -95,9 +95,14 @@ function App() {
               <img className="camera-icon" src={movieCamera} />
               <h1>The Shoppies</h1>
             </div>
-            <h3>About</h3>
+            <h2>About</h2>
           </div>
           <SearchPanel handleSearchBar={handleSearchBar} />
+          {nominees.length === 5 && (
+            <p className="alert-text">
+              You have reached the maximum number of nominations!
+            </p>
+          )}
           <div className="flex-row1">
             <SearchResultsPanel
               input={input}
