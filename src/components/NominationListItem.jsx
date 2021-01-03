@@ -1,5 +1,4 @@
 import Button from "./Button";
-import "./NominationListItem.scss";
 
 function NominationListItem({ movie, removeNominee }) {
   return (

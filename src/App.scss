@@ -230,6 +230,9 @@ h2 {
 
   .search-panel {
     margin-top: 20px;
+    &--mobile-title {
+      color: $primary-background-color;
+    }
   }
 
   button {

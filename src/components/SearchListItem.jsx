@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./SearchListItem.scss";
 import Button from "./Button";
 
 function SearchListItem({ nominees, movieData, addNominee }) {
