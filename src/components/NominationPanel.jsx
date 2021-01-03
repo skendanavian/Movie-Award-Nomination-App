@@ -19,19 +19,24 @@ function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
   return (
     <div className="nominee-panel">
       <div className="count-box">
-        {nomineeTotal === 0 && (
-          <>
-            <h3>Nominations</h3>
-            <p className="counter-text">(5 movies)</p>
-          </>
-        )}
-        {nomineeTotal > 0 && (
+        {nomineeTotal <= 5 && (
           <>
             <h3>Nominations</h3>
             <p className="counter-text">({nomineeTotal} / 5)</p>
           </>
         )}
       </div>
+      {nomineeTotal === 0 && (
+        <>
+          <p className="status-text">
+            Instructions: <br />
+            1. Search for movie titles <br />
+            2. Nominate exactly 5 movies <br />
+            3. Submit your nominations
+            <br />
+          </p>
+        </>
+      )}
 
       <ol>
         <div>{nominationList}</div>

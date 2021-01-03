@@ -38,4 +38,12 @@
     justify-content: center;
     align-items: center;
   }
+
+  .status-text {
+    margin: 3rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: $primary-background-color;
+    line-height: 40px;
+  }
 }

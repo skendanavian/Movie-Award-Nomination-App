@@ -21,4 +21,60 @@
     margin-top: 1.5rem;
     height: 4.5rem;
   }
+
+  .submit-btn {
+    padding-top: 1rem;
+
+    button {
+      height: 2.5rem;
+      width: 12rem;
+      box-shadow: none;
+      font-size: 1rem;
+
+      &:enabled {
+        animation: breathingOutBtn 3s ease;
+      }
+
+      &:disabled {
+        // animation: breathingInBtn 3s ease;
+        // transition: scale 4s ease;
+        transform: scale(0.85);
+      }
+
+      &:hover:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
 }
+
+@keyframes breathingOutBtn {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+// @keyframes breathingInBtn {
+//   0% {
+//     transform: scale(1.2);
+//   }
+//   25% {
+//     transform: scale(1.1);
+//   }
+//   75% {
+//     transform: scale(1);
+//   }
+
+//   100% {
+//     transform: scale(1);
+//   }
+// }

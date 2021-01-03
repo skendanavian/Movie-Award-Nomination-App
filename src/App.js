@@ -38,13 +38,14 @@ function App() {
   // When nominee list is 5 -> sets submit page to submissionView
 
   useEffect(() => {
-    if (nominees && nominees.length === 5) {
-      setTimeout(() => {
-        setSubmissionView(true);
-      }, 1000);
-    }
     setNomineeNumber(nominees.length);
   }, [nominees]);
+
+  useEffect(() => {
+    setNominees([]);
+    setInput("");
+    setSearchList([]);
+  }, [submissionView]);
 
   // Show Submit page for 4.5 seconds and then back to home page
 
@@ -82,6 +83,12 @@ function App() {
     setNominees(updatedNominees);
   };
 
+  const handleSubmit = () => {
+    if (nominees && nominees.length === 5) {
+      setSubmissionView(true);
+    }
+  };
+
   return (
     <>
       {submissionView && (
@@ -107,7 +114,11 @@ function App() {
             </div>
             <h2 className="desktop-heading">2021 Movie Awards</h2>
           </div>
-          <SearchPanel handleSearchBar={handleSearchBar} />
+          <SearchPanel
+            handleSubmit={handleSubmit}
+            nomineeNumber={nomineeNumber}
+            handleSearchBar={handleSearchBar}
+          />
 
           <div className="flex-row1">
             <SearchResultsPanel

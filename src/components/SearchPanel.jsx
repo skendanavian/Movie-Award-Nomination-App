@@ -1,8 +1,9 @@
 import SearchBar from "./SearchBar";
+import Button from "./Button";
 import movieCamera from "../components/images/movieCamera.png";
 import "./SearchPanel.scss";
 
-function SearchPanel({ handleSearchBar }) {
+function SearchPanel({ handleSubmit, handleSearchBar, nomineeNumber }) {
   return (
     <div className="search-panel">
       <div className="site-logo-container ">
@@ -19,6 +20,11 @@ function SearchPanel({ handleSearchBar }) {
       </div>
 
       <SearchBar handleSearchBar={handleSearchBar} />
+      <div className="submit-btn">
+        <Button selected={nomineeNumber < 5} onClick={handleSubmit}>
+          Submit Nominations
+        </Button>
+      </div>
     </div>
   );
 }

@@ -26,9 +26,13 @@ function SearchResultsPanel({ input, searchResults, nominees, addNominee }) {
         <h3>Search Results</h3>
       )}
 
-      <ul>
-        <div>{searchResultsList}</div>
-      </ul>
+      {input && !searchResults.length ? (
+        <p className="status-text">No Results Found</p>
+      ) : (
+        <ul>
+          <div>{searchResultsList}</div>
+        </ul>
+      )}
     </div>
   );
 }
