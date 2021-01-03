@@ -11,14 +11,15 @@
 - <h3 style="color: lightblue">Utilizes The <a href="http://www.omdbapi.com/">OMDB</a> Open Movie Database API to search for movie titles.</h3>
 - <h3 style="color: lightblue">Live Search Bar Feature - Movie search results update on the page as characters are typed.</h3>
 - <h3 style="color: lightblue">Fully Responsive for optimal viewing on large and small devices.</h3>
+- <h3 style="color: lightblue">Subtle animations on a number of page load and click events.</h3>
 - <h3 style="color: lightblue">Top 5 searches are displayed. Click on the Nominate button to add to the nomination list.</h3>
 - <h3 style="color: lightblue">Once a movie is nominated - The button is disabled to prevent duplicate nominations.
   </h3>
 - <h3 style="color: lightblue">Nominations can also be removed by the user.
   </h3>
-- <h3 style="color: lightblue">A counter displays how many nominations currently exist. The required number is 5.
+- <h3 style="color: lightblue">A counter displays how many nominations currently exist out of the required 5.
   </h3>
-- <h3 style="color: lightblue">When 5 movies have been nominated -> The app displays an animated submission page before returning to the home screen. 
+- <h3 style="color: lightblue">When 5 movies have been nominated -> an animated submission page is displayed before returning to the home screen. 
   </h3>
 
   ## Design and Development
