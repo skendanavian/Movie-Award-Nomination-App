@@ -1,5 +1,3 @@
-</style>
-
 # The Shoppies - Movie Award Nomination App
 
 ## 2021 Shopify Internship Challenge
