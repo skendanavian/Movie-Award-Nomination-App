@@ -55,7 +55,7 @@
 
   ## Design and Development
 
-- <h5 style="color: #b0965a">My goal with this project was to create both a modern and simple UI that reflects the elegance and prestige or a movie award event like the Academy Awards. I wanted it to grab the attention of the user while remaining highly accessible.</h5>
+- <h5 style="color: #b0965a">My goal with this project was to create both a modern and simple UI that reflects the elegance and prestige of a movie award event like the Academy Awards. I wanted it to grab the attention of the user while remaining highly accessible.</h5>
 
 - <h5 style="color: #b0965a">The colors, fonts, text/border shadow, and animations all add to the award nomination experience.</h5>
 
