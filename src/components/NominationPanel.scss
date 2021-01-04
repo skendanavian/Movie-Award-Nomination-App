@@ -10,24 +10,27 @@
   ol {
     display: flex;
     margin: 0;
-  }
-
-  li {
-    font-family: $primary-font;
-    animation: fadeIn 1s ease;
     list-style-type: decimal;
-    color: $primary-background-color;
-    display: flex;
-    margin: 1rem 10px;
-    font-size: 1em;
-    font-weight: 600;
-    text-align: left;
-    align-items: center;
+    list-style-position: inside;
+
+    li {
+      font-family: $primary-font;
+      animation: fadeIn 1s ease;
+      list-style: decimal;
+      color: $primary-background-color;
+      display: flex;
+      margin: 1rem 10px;
+
+      font-size: 1em;
+      font-weight: 600;
+      text-align: left;
+      align-items: center;
+    }
   }
 
   .counter-text {
     margin-left: 10px;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     color: $primary-background-color;
   }
 
@@ -45,5 +48,10 @@
     text-align: center;
     color: $primary-background-color;
     line-height: 40px;
+  }
+
+  p {
+    font-family: $primary-font;
+    font-weight: 500;
   }
 }

@@ -1,9 +1,9 @@
 import Button from "./Button";
 
-function NominationListItem({ movie, removeNominee }) {
+function NominationListItem({ number, movie, removeNominee }) {
   return (
     <li>
-      {`${movie.title} (${movie.year})`}
+      {`${number}. ${movie.title} (${movie.year})`}
       <Button movieData={movie} onClick={removeNominee}>
         Remove
       </Button>

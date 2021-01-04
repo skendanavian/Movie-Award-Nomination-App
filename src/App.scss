@@ -105,15 +105,21 @@ h2 {
   justify-content: center;
 
   h1 {
-    animation: slideIn 2.5s ease;
+    animation: slideIn 2s ease;
     font-size: 3rem;
     color: $color-primary;
   }
-}
+  .animation-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+  }
 
-.thankyou-message {
-  margin: 2rem 0.2rem;
-  animation: fadeIn 3s ease;
+  .thankyou-message {
+    margin: 2rem 0.2rem 1rem 0.2rem;
+    animation: fadeInThankyou 4s linear;
+  }
 }
 
 // Animations
@@ -144,6 +150,18 @@ h2 {
 }
 @-webkit-keyframes fadeIn {
   0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInThankyou {
+  0% {
+    opacity: 0;
+  }
+  70% {
     opacity: 0;
   }
   100% {

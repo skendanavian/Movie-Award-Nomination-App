@@ -3,7 +3,7 @@ import SearchPanel from "../src/components/SearchPanel";
 import SearchResultsPanel from "../src/components/SearchResultsPanel";
 import NominationPanel from "../src/components/NominationPanel";
 import movieCamera from "./components/images/movieCamera.png";
-import CircleLoader from "react-spinners/CircleLoader";
+import PuffLoader from "react-spinners/PuffLoader";
 import axios from "axios";
 // import "./components/SearchPanel.scss";
 import "./App.scss";
@@ -47,12 +47,12 @@ function App() {
     setSearchList([]);
   }, [submissionView]);
 
-  // Show Submit page for 4.5 seconds and then back to home page
+  // Show Submit page for 5 seconds and then back to home page
 
   if (submissionView) {
     setTimeout(() => {
       setSubmissionView(false);
-    }, 4500);
+    }, 6000);
   }
 
   // Live Search Function
@@ -94,10 +94,18 @@ function App() {
       {submissionView && (
         <div className={submissionView && " page-container show-page"}>
           <h1>Submitting Nominations!</h1>
-          <CircleLoader color={"#39276f"} loading={submissionView} size={170} />
-
+          <div className="animation-box">
+            <PuffLoader
+              color={"#39277f"}
+              loading={submissionView}
+              size={180}
+              // radius={100}
+              // height={100}
+              // width={100}
+            />
+          </div>
           <h3 className="thankyou-message">
-            Thanks for submitting to the 2021 Shoppie Awards!
+            Thanks! We have received your Nominations!
           </h3>
         </div>
       )}
@@ -112,7 +120,7 @@ function App() {
               />
               <h1>The Shoppies</h1>
             </div>
-            <h2 className="desktop-heading">2021 Movie Awards</h2>
+            <h2 className="desktop-heading">Movie Awards</h2>
           </div>
           <SearchPanel
             handleSubmit={handleSubmit}

@@ -5,9 +5,10 @@ function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
   let nominationList;
 
   if (nominees) {
-    nominationList = nominees.map((movie) => {
+    nominationList = nominees.map((movie, index) => {
       return (
         <NominationListItem
+          number={index + 1}
           key={movie.Title}
           movie={movie}
           removeNominee={removeNominee}

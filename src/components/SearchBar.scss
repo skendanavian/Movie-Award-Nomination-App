@@ -23,7 +23,7 @@
 .search-icon {
   margin-right: 1rem;
   color: $color-primary;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 input {
@@ -35,19 +35,3 @@ input {
     outline: #b0965a 1px auto;
   }
 }
-
-// @media screen and (max-width: 500px) {
-//   .search-panel {
-//     h2 {
-//       font-size: 2rem;
-//     }
-//     .search-bar {
-//       width: 250px;
-//       font-size: 1em;
-
-//       .flex-row {
-//         width: 250px;
-//       }
-//     }
-//   }
-// }
