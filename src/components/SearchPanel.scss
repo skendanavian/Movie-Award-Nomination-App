@@ -8,11 +8,9 @@
   width: 60vw;
   margin-top: 3.5em;
   h2 {
-    // color: rgb(162, 160, 160);
     color: $accent-color;
     font-weight: 500;
     font-size: 1.8rem;
-
     text-shadow: 0px 4px 3px rgba(97, 97, 97, 0.4),
       0px 8px 13px rgba(130, 130, 130, 0.1), 0px 18px 23px rgba(87, 87, 87, 0.1);
   }
@@ -37,12 +35,11 @@
       }
 
       &:disabled {
-        // animation: breathingInBtn 3s ease;
-        // transition: scale 4s ease;
-        background-color: $color-primary;
-        color: $primary-background-color;
-        transform: scale(0.95);
-        opacity: 0.7;
+        display: none;
+        // background-color: $accent-color;
+        // color: $primary-background-color;
+        // transform: scale(0.95);
+        // opacity: 0.7;
       }
 
       &:hover:disabled {
@@ -67,18 +64,3 @@
     transform: scale(1);
   }
 }
-// @keyframes breathingInBtn {
-//   0% {
-//     transform: scale(1.2);
-//   }
-//   25% {
-//     transform: scale(1.1);
-//   }
-//   75% {
-//     transform: scale(1);
-//   }
-
-//   100% {
-//     transform: scale(1);
-//   }
-// }
