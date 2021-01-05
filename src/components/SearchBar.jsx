@@ -11,6 +11,7 @@ function SearchBar({ handleSearchBar }) {
       <input
         className="search-bar"
         placeholder="Enter Movie Title"
+        maxlength="50"
         onChange={(event) => handleSearchBar(event.target.value)}
       />
     </div>

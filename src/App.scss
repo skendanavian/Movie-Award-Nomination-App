@@ -49,8 +49,8 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.764);
-  background-color: transparent;
+  background-color: black;
+  // background-color: transparent;
   top: 0;
   position: fixed;
   margin-bottom: 2em;
@@ -86,7 +86,9 @@ h2 {
 
 .flex-row1 {
   display: flex;
-  min-height: 60vh;
+  min-height: 50vh;
+
+  max-height: fit-content;
   margin: 0.2rem 0.5rem 1.5rem 0.5rem;
   padding-bottom: 2rem;
   background-color: $secondary-background-color;
