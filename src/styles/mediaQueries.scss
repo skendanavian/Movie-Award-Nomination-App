@@ -422,11 +422,11 @@
         width: 20rem;
         height: 4rem;
         font-size: 1.5rem;
-        margin: 1rem;
+        margin: 0.5rem;
       }
       .search-bar {
         input {
-          height: 5rem;
+          height: 4rem;
         }
       }
     }
@@ -435,7 +435,7 @@
       font-size: 3.2rem;
     }
     h3 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -446,13 +446,13 @@
   }
   .flex-row1 {
     width: 70vw;
-    min-height: fit-content;
+    min-height: 60vh;
 
     h3 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
 
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 
     button {
       margin-right: 1rem;
