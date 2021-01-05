@@ -5,7 +5,6 @@ import NominationPanel from "../src/components/NominationPanel";
 import movieCamera from "./components/images/movieCamera.png";
 import PuffLoader from "react-spinners/PuffLoader";
 import axios from "axios";
-// import "./components/SearchPanel.scss";
 import "./App.scss";
 import "./styles/mediaQueries.scss";
 
