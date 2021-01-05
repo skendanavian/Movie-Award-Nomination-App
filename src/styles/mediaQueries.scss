@@ -1,7 +1,50 @@
-// mobile and tablet styles
 @import "./variables.scss";
 
-@media screen and (max-width: 725px) {
+@media only screen and (max-width: 400px) {
+  .search-bar {
+    input {
+      width: 20rem;
+    }
+  }
+  .flex-row1 {
+    flex-direction: column;
+
+    .status-text {
+      font-size: 14px;
+      margin: 10px 5px;
+    }
+
+    .nominee-panel ol li {
+      font-size: 14px;
+    }
+    .results-panel ul li {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 499px) {
+  .flex-row1 {
+    .search-panel {
+      h2 {
+        font-size: 2rem;
+      }
+      .search-bar {
+        width: 250px;
+        font-size: 1em;
+
+        .flex-row {
+          width: 250px;
+        }
+      }
+    }
+    button {
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
   .page-container {
     height: fit-content;
     background-attachment: fixed;
@@ -42,7 +85,7 @@
 
   button {
     height: 1.7rem;
-    width: 5rem;
+    min-width: 5rem;
     font-size: 14px;
   }
 
@@ -87,9 +130,6 @@
         font-size: 1rem;
         text-align: left;
       }
-      .btn {
-        align-content: center;
-      }
     }
 
     .nominee-panel {
@@ -112,57 +152,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
-  .flex-row1 {
-    flex-direction: column;
-
-    .status-text {
-      font-size: 14px;
-      margin: 10px 5px;
-    }
-
-    .nominee-panel ol li {
-      font-size: 14px;
-    }
-    .results-panel ul li {
-      font-size: 14px;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .search-panel {
-    h2 {
-      font-size: 2rem;
-    }
-    .search-bar {
-      width: 250px;
-      font-size: 1em;
-
-      .flex-row {
-        width: 250px;
-      }
-    }
-  }
-}
-
-// @media only screen and (min-width: 960px) and (max-width: 1200) {
-//   .search-panel {
-//     h2 {
-//       font-size: 2rem;
-//     }
-//     .search-bar {
-//       width: 250px;
-//       font-size: 1em;
-
-//       .flex-row {
-//         width: 250px;
-//       }
-//     }
-//   }
-// }
-
-@media screen and (min-width: 950px) and (max-width: 1400px) {
+@media only screen and (min-width: 769px) and (max-width: 992px) {
   .header {
     h1 {
       font-size: 2.6rem;
@@ -189,37 +179,54 @@
     }
   }
 }
-@media screen and (min-width: 1200px) {
-  .flex-row1 {
-    width: 8vw;
-    h3 {
-      font-size: 1.5rem;
-    }
 
-    font-size: 1rem;
-
-    button {
-      height: 2rem;
-      min-width: 5.6rem;
-      font-size: 0.9rem;
-      transform: size(1.5);
-    }
-  }
-}
-
-@media screen and (min-width: 1401px) {
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
   .header {
     h1 {
-      font-size: 3rem;
+      font-size: 2.6rem;
     }
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
+  }
+
+  .flex-row1 {
+    width: 80vw;
   }
   .search-panel {
     .site-logo-container {
       height: fit-content;
       padding-top: 1rem;
+    }
+    h2 {
+      margin: 2rem 2rem 1rem 2rem;
+      font-size: 2.4rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .header {
+    h1 {
+      font-size: 2.7rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  .search-panel {
+    .submit-btn {
+      button {
+        width: 15rem;
+        height: 3rem;
+        font-size: 1.2rem;
+      }
+    }
+    .site-logo-container {
+      height: fit-content;
+      padding-top: 2rem;
     }
     h2 {
       margin: 2rem 2rem 1rem 2rem;
@@ -232,15 +239,127 @@
   .flex-row1 {
     width: 70vw;
     h3 {
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
 
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+
+    .nominee-panel {
+      p {
+        font-size: 1.1rem;
+      }
+    }
 
     button {
       height: 2rem;
       min-width: 6rem;
       font-size: 1rem;
+      transform: size(1.5);
+    }
+  }
+}
+
+@media only screen and (min-width: 1401px) {
+  .header {
+    h1 {
+      font-size: 3.5rem;
+    }
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+  .search-panel {
+    .submit-btn {
+      button {
+        width: 15rem;
+        height: 3rem;
+        font-size: 1.2rem;
+      }
+    }
+    .site-logo-container {
+      height: fit-content;
+      padding-top: 2rem;
+    }
+    h2 {
+      margin: 2rem 2rem 1rem 2rem;
+      font-size: 2.9rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  .flex-row1 {
+    width: 80vw;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    font-size: 1.7rem;
+
+    button {
+      margin-right: 1rem;
+      height: 2.5rem;
+      min-width: 8rem;
+      font-size: 1.3rem;
+      transform: size(1.5);
+    }
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .header {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.8rem;
+    }
+  }
+  .search-panel {
+    .submit-btn {
+      button {
+        width: 20rem;
+        height: 4rem;
+        font-size: 1.5rem;
+      }
+      .search-bar {
+        input {
+          height: 5rem;
+        }
+      }
+    }
+    .site-logo-container {
+      padding-top: 2rem;
+    }
+    h2 {
+      margin: 2rem 2rem 1rem 2rem;
+      font-size: 3.2rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  #root > div > div.search-panel > div.flex-row > input {
+    height: 3.5rem;
+    width: 30rem;
+    font-size: 2rem;
+  }
+  .flex-row1 {
+    width: 70vw;
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    font-size: 1.8rem;
+
+    button {
+      margin-right: 1rem;
+      height: 3rem;
+      min-width: 9rem;
+      font-size: 1.5rem;
       transform: size(1.5);
     }
   }
