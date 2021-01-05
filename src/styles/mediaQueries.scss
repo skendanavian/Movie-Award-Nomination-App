@@ -298,10 +298,10 @@
 @media only screen and (min-width: 1201px) {
   .header {
     h1 {
-      font-size: 2.7rem;
+      font-size: 2.5rem;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
   .search-panel {
@@ -310,23 +310,26 @@
         width: 15rem;
         height: 3rem;
         font-size: 1.2rem;
+        margin: 0;
       }
     }
 
     h2 {
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
     h3 {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
   }
   .flex-row1 {
-    width: 80vw;
+    width: 85vw;
+    min-height: 60vh;
+
     h3 {
       font-size: 1.5rem;
     }
 
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     .nominee-panel {
       p {
@@ -337,7 +340,7 @@
     button {
       height: 2rem;
       min-width: 6rem;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 }
