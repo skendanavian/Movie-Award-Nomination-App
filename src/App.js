@@ -94,14 +94,7 @@ function App() {
         <div className={submissionView && " page-container show-page"}>
           <h1>Submitting Nominations!</h1>
           <div className="animation-box">
-            <PuffLoader
-              color={"#39277f"}
-              loading={submissionView}
-              size={180}
-              // radius={100}
-              // height={100}
-              // width={100}
-            />
+            <PuffLoader color={"#39277f"} loading={submissionView} size={180} />
           </div>
           <h3 className="thankyou-message">
             Thanks! We have received your Nominations!
