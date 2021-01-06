@@ -23,7 +23,6 @@ function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
         {nomineeTotal <= 5 && (
           <>
             <h3>Nominations</h3>
-            {/* <p className="counter-text">({nomineeTotal} / 5)</p> */}
           </>
         )}
       </div>

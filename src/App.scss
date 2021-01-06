@@ -50,7 +50,6 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-color: black;
   background-color: transparent;
   top: 0;
   position: fixed;
@@ -92,9 +91,7 @@ h2 {
   display: flex;
   position: inherit;
   margin-top: 11rem;
-  // max-height: fit-content;
   margin: 0.2rem 0.5rem 1.5rem 0.5rem;
-  // padding-bottom: 2rem;
   background-color: $secondary-background-color;
   border-radius: 15px;
   box-shadow: rgba(117, 117, 117, 0.25) 0px 54px 55px,

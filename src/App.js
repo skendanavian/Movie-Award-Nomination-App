@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import SearchPanel from "../src/components/SearchPanel";
 import SearchResultsPanel from "../src/components/SearchResultsPanel";
 import NominationPanel from "../src/components/NominationPanel";
-import movieCamera from "./components/images/movieCamera.png";
 import PuffLoader from "react-spinners/PuffLoader";
 import axios from "axios";
 import "./App.scss";
@@ -103,16 +102,6 @@ function App() {
       )}
       {!submissionView && (
         <div className={!submissionView && "page-container"}>
-          {/* <div className="header">
-            <div className="site-logo-container">
-              <img
-                className="camera-icon"
-                src={movieCamera}
-                alt="movie-camera-icon"
-              />
-              <h1>The Shoppies</h1>
-            </div>
-          </div> */}
           <SearchPanel
             handleSubmit={handleSubmit}
             nomineeNumber={nomineeNumber}

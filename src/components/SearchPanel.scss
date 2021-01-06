@@ -29,7 +29,6 @@
   .site-logo-container {
     height: 4.5rem;
     height: fit-content;
-    // padding-top: 2rem;
   }
 
   .search-items {
@@ -56,11 +55,9 @@
       &:disabled {
         width: 30rem;
         transition: display 3s ease;
-        // display: none;
         font-size: 1.1rem;
         background-color: transparent;
         color: $accent-color;
-        // transform: scale(0);
         opacity: 1;
       }
 

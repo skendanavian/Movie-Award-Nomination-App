@@ -39,12 +39,7 @@
       <img src="https://github.com/skendanavian/shopify-intern-challenge-2021/blob/main/docs/homeSearch.png?raw=true" >
     
     </p>
-  </p>
-    <p align='center'>Home (With Search Items and less than 5 Nominees)</p>
-     <p align="center">
-      <img src="https://github.com/skendanavian/shopify-intern-challenge-2021/blob/main/docs/homeSearch2.png?raw=true" >
-    
-    </p>
+
   </p>
     <p align='center'>Submission Animation Page</p>
     <p align="center">

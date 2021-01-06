@@ -6,10 +6,6 @@ import "./SearchPanel.scss";
 function SearchPanel({ handleSubmit, handleSearchBar, nomineeNumber }) {
   return (
     <div className="search-panel">
-      {/* <div className="site-logo-container ">
-        <h2 className="desktop-heading">Find a Movie</h2>
-      </div> */}
-
       <div className="header">
         <div className="site-logo-container">
           <img
@@ -19,7 +15,6 @@ function SearchPanel({ handleSubmit, handleSearchBar, nomineeNumber }) {
           />
           <h1>The Shoppies</h1>
         </div>
-        {/* <div className="search-items"> */}
         <SearchBar handleSearchBar={handleSearchBar} />
         <div className="submit-btn">
           <Button selected={nomineeNumber < 5} onClick={handleSubmit}>
@@ -29,7 +24,6 @@ function SearchPanel({ handleSubmit, handleSearchBar, nomineeNumber }) {
               <h3>({nomineeNumber} of 5 Nominations)</h3>
             )}
           </Button>
-          {/* </div> */}
         </div>
       </div>
     </div>
