@@ -11,13 +11,15 @@
 }
 
 .flex-row {
-  width: 500px;
-  max-width: 90%;
+  width: 30rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin-top: 0.5rem;
+}
 
-  padding-right: 3em;
+.flex-row2 {
+  display: flex;
+  align-items: center;
 }
 
 .search-icon {

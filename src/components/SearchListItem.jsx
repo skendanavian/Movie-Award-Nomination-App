@@ -4,7 +4,6 @@ import Button from "./Button";
 function SearchListItem({ nominees, movieData, addNominee }) {
   const [selected, setSelected] = useState(false);
 
-  // disables nomination buttons when title/year is in the nomination list
   useEffect(() => {
     if (nominees !== undefined) {
       if (nominees.length === 5) {

@@ -23,7 +23,6 @@ function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
         {nomineeTotal <= 5 && (
           <>
             <h3>Nominations</h3>
-            {/* <p className="counter-text">({nomineeTotal} / 5)</p> */}
           </>
         )}
       </div>
@@ -31,10 +30,9 @@ function NominationPanel({ nominees, nomineeTotal, removeNominee }) {
         <>
           <p className="status-text">
             <h3>How it works</h3>
-            1. Search for movie titles <br />
-            2. Nominate 5 movies <br />
-            3. Submit your nominations
-            <br />
+            <p>1. Search for movie titles</p>
+            <p>2. Nominate 5 movies</p>
+            <p>3. Submit your nominations</p>
           </p>
         </>
       )}

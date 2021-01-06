@@ -18,7 +18,7 @@
   }
   h3 {
     font-family: $primary-font;
-    color: $color-primary;
+    color: $accent-color;
     font-weight: 500;
     font-size: 1.1rem;
     padding: 0;
@@ -29,7 +29,13 @@
   .site-logo-container {
     height: 4.5rem;
     height: fit-content;
-    padding-top: 2rem;
+  }
+
+  .search-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .submit-btn {
@@ -49,11 +55,9 @@
       &:disabled {
         width: 30rem;
         transition: display 3s ease;
-        // display: none;
         font-size: 1.1rem;
         background-color: transparent;
         color: $accent-color;
-        // transform: scale(0);
         opacity: 1;
       }
 
