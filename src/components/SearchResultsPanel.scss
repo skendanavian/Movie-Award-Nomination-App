@@ -2,10 +2,10 @@
 
 .results-panel {
   width: 45vw;
-  min-height: 50vh;
+  height: fit-content;
   margin: 0.8rem 0px;
   background-color: transparent;
-  border-right: 3px solid rgb(162, 160, 160);
+  // border-right: 3px solid rgb(162, 160, 160);
 
   ul {
     color: $primary-background-color;
