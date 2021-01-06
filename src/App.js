@@ -103,7 +103,7 @@ function App() {
       )}
       {!submissionView && (
         <div className={!submissionView && "page-container"}>
-          <div className="header">
+          {/* <div className="header">
             <div className="site-logo-container">
               <img
                 className="camera-icon"
@@ -112,8 +112,7 @@ function App() {
               />
               <h1>The Shoppies</h1>
             </div>
-            <h2 className="desktop-heading">Movie Awards</h2>
-          </div>
+          </div> */}
           <SearchPanel
             handleSubmit={handleSubmit}
             nomineeNumber={nomineeNumber}
@@ -127,6 +126,7 @@ function App() {
               searchResults={searchList}
               addNominee={addNominee}
             />
+            <div className="divider"></div>
             <NominationPanel
               nomineeTotal={nomineeNumber}
               nominees={nominees}

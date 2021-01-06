@@ -2,7 +2,7 @@
 
 .results-panel {
   width: 45vw;
-  height: fit-content;
+  // height: fit-content;
   margin: 0.8rem 0px;
   background-color: transparent;
   // border-right: 3px solid rgb(162, 160, 160);
@@ -31,7 +31,7 @@
 
   .status-text {
     margin: 3rem;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 1.3rem;
     text-align: center;
     color: $primary-background-color;
