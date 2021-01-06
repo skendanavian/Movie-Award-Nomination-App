@@ -19,7 +19,7 @@ function SearchPanel({ handleSubmit, handleSearchBar, nomineeNumber }) {
           />
           <h1>The Shoppies</h1>
         </div>
-
+        {/* <div className="search-items"> */}
         <SearchBar handleSearchBar={handleSearchBar} />
         <div className="submit-btn">
           <Button selected={nomineeNumber < 5} onClick={handleSubmit}>
@@ -29,6 +29,7 @@ function SearchPanel({ handleSubmit, handleSearchBar, nomineeNumber }) {
               <h3>({nomineeNumber} of 5 Nominations)</h3>
             )}
           </Button>
+          {/* </div> */}
         </div>
       </div>
     </div>

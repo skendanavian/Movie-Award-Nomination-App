@@ -54,7 +54,6 @@ h2 {
   background-color: transparent;
   top: 0;
   position: fixed;
-  margin-bottom: 2em;
 
   h1 {
     font-size: 2rem;
@@ -91,7 +90,7 @@ h2 {
 
 .flex-row1 {
   display: flex;
-  position: relative;
+  position: inherit;
   margin-top: 11rem;
   // max-height: fit-content;
   margin: 0.2rem 0.5rem 1.5rem 0.5rem;
